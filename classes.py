@@ -24,3 +24,11 @@ class customer:
     @password.setter
     def password(self, value):
         self.__password = value
+
+    @property
+    def wallet(self):
+        return self.__wallet
+
+    @wallet.setter
+    def wallet(self, value):
+        self.__wallet = value
