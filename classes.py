@@ -8,7 +8,7 @@ class customer:
         self.__bought_items = bought_items
         self.__score = score
         self.__id = id
-        
+
     @property
     def user(self):
         return self.__user
@@ -16,3 +16,11 @@ class customer:
     @user.setter
     def user(self, value):
         self.__user = value
+
+    @property
+    def password(self):
+        return self.__password
+
+    @password.setter
+    def password(self, value):
+        self.__password = value
