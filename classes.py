@@ -64,3 +64,11 @@ class customer:
     @score.setter
     def score(self, new_score):
         self.__score = new_score
+
+    @property
+    def ID(self):
+        return self.__id
+
+    @ID.setter
+    def ID(self, customer_counter):
+        self.__id = "CU"+customer_counter
