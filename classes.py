@@ -8,3 +8,11 @@ class customer:
         self.__bought_items = bought_items
         self.__score = score
         self.__id = id
+        
+    @property
+    def user(self):
+        return self.__user
+
+    @user.setter
+    def user(self, value):
+        self.__user = value
