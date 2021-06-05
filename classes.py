@@ -67,8 +67,12 @@ class customer:
 
     @property
     def ID(self):
-        return self.__id
+        return "CU"+self.__id
 
     @ID.setter
     def ID(self, customer_counter):
         self.__id = "CU"+customer_counter
+
+    def __str__(self):
+        return 'user: {}   password: {}    wallet: {}   cart: {}   favourite: {}   bought_items: {}    score: {}    ID:{}\n'\
+        .format(self.user, self.password, self.wallet, self.cart, self.favourite, self.bought_items, self.score, self.ID)
