@@ -56,3 +56,11 @@ class customer:
     @bought_items.setter
     def bought_items(self, bought_list):
         self.__bought_items = bought_list
+
+    @property
+    def score(self):
+        return self.__score
+
+    @score.setter
+    def score(self, new_score):
+        self.__score = new_score
