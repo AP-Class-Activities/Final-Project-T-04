@@ -32,3 +32,11 @@ class customer:
     @wallet.setter
     def wallet(self, value):
         self.__wallet = value
+
+    @property
+    def cart(self):
+        return self.__cart
+
+    @cart.setter
+    def cart(self, cart_list):
+        self.__cart = cart_list
