@@ -12,3 +12,10 @@ class Shopkeeper:
         self.__rate = rate
         self.__profit = profit
         self.__code = code
+    @property
+    def user(self):
+        return self.__user
+
+    @user.setter
+    def user(self, value):
+        self.__user = value
