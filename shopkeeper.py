@@ -34,7 +34,7 @@ class Shopkeeper:
     @product.setter
     def product(self,product_list): 
         self.__product = product_list
-        
+
     @property
     def location(self): 
         return self.__location
@@ -42,3 +42,26 @@ class Shopkeeper:
     @location.setter
     def location(self,value): 
         self.__location = value
+    @property
+    def score(self): 
+        return self.__score
+    
+    @score.setter
+    def score(self,value): 
+        self.__score = value    
+
+    @property
+    def order(self): 
+        return self.__order
+
+    @order.setter
+    def order(self,order_list): 
+        self.__order = order_list
+
+    @property
+    def wallet(self): 
+        return self.__wallet
+
+    @wallet.setter
+    def wallet(self,wallet): 
+        self.__wallet = wallet    
