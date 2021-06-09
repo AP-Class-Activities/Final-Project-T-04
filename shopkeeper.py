@@ -26,38 +26,19 @@ class Shopkeeper:
     @password.setter
     def password(self, value):
         self.__password = value    
+    
     @property
-    def wallet(self):
-        return self.__wallet
+    def product(self): 
+        return self.__product
 
-    @wallet.setter
-    def wallet(self, value):
-        self.__wallet = value
+    @product.setter
+    def product(self,product_list): 
+        self.__product = product_list
+        
     @property
-    def cart(self):
-        return self.__cart
-
-    @cart.setter
-    def cart(self, cart_list):
-        self.__cart = cart_list
-    @property
-    def favourite(self):
-        return self.__favourite
-
-    @favourite.setter
-    def favourite(self, fav_list):
-        self.__favourite = fav_lists
-    @property
-    def bought_items(self):
-        return self.__bought_items
-
-    @bought_items.setter
-    def bought_items(self, bought_list):
-        self.__bought_items = bought_list
-    @property
-    def score(self):
-        return self.__score
-
-    @score.setter
-    def score(self, new_score):
-        self.__score = new_score
+    def location(self): 
+        return self.__location
+    
+    @location.setter
+    def location(self,value): 
+        self.__location = value
