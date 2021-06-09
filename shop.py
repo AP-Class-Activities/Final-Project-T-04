@@ -1,70 +1,79 @@
 class shop:
-    def __init__(self, user, password, location,profit,sold_items,shopkeepers_list,customers_list):
-        self.__user = user
-        self.__password = password
+    def __init__(self, name, products, location, shop_id, add, delete, destination, comission):
+        self.__name = name
+        self.__products = products
         self.__location = location
-        self.__profit = profit
-        self.__sold_items = sold_items
-        self.__shopkeepers_list = shopkeepers_list
-        self.__customers_list = customers_list
+        self.__shop_id = shop_id
+        self.__add = add
+        self.__delete = delete
+        self.__destination = destination
+        self.__comission = comission
 
     @property
-    def user(self):
-        return self.__user
+    def name(self):
+        return self.__name
 
-    @user.setter
-    def user(self, new_user):
-        self.__user = new_user
+    @name.setter
+    def name(self, value):
+        self.__name = value
 
     @property
-    def password(self):
-        return self.__password
+    def products(self):
+        return self.__products
 
-    @password.setter
-    def password(self, new_pass):
-        self.__password = new_pass
+    @products.setter
+    def products(self, products_list):
+        self.__products = products_list
 
     @property
     def location(self):
         return self.__location
 
     @location.setter
-    def location(self, loc):
-        self.__location = loc
+    def location(self, location):
+        self.__location = location
 
     @property
-    def profit(self):
-        return self.__profit
+    def shop_id(self):
+        return self.__shop_id
 
-    @profit.setter
-    def profit(self, new_profit):
-        self.__profit = new_profit
-
-    @property
-    def sold_items(self):
-        return self.__sold_items
-
-    @sold_items.setter
-    def sold_items(self, new_sold_list):
-        self.__sold_items = new_sold_list
+    @shop_id.setter
+    def code(self, shop_id):
+        self.__shop_id = shop_id
 
     @property
-    def shopkeepers_list(self):
-        return self.__shopkeepers_list
+    def add(self):
+        return self.__add
 
-    @shopkeepers_list.setter
-    def shopkeepers_list(self, new_shopkeepers):
-        self.__shopkeepers_list = new_shopkeepers
+    @add.setter
+    def add(self, add):
+        self.__add = add
 
     @property
-    def customers_list(self):
-        return self.__customers_list
+    def delete(self):
+        return self.__delete
 
-    @customers_list.setter
-    def customers_list(self, new_customers):
-        self.__customers_list = new_customers
+    @delete.setter
+    def delete(self, delete):
+        self.__delete = delete
+
+    @property
+    def destination(self):
+        return self.__destination
+
+    @destination.setter
+    def destination(self, destination):
+        self.__destination = destination
+
+    @property
+    def comission(self):
+        return self.__comission
+
+    @comission.setter
+    def comission(self, comission):
+        self.__comission = comission
 
     def __str__(self):
-        return'user: {}  password:{}  location: {}  profit: {}  sold_items: {}  shopkeepers_list: {}  customers_list: {}'.format(
-            self.user, self.password, self.location, self.profit, self.sold_items, self.shopkeepers_list,
-            self.customers_list)
+        return 'name: {}   products: {} location:{} shop_id:{}  add:{}  delete:{}  destination:{}  comission:{}' \
+            .format(self.name, self.products, self.location, self.shop_id, self.add, self.delete, self.destination,
+                    self.comission)
