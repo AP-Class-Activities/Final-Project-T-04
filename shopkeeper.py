@@ -1,5 +1,5 @@
 class Shopkeeper:
-    def __init__(self, user, password, product, location, score, order, wallet, sell, credit, rate, profit, code):
+    def __init__(self, user, password, product, location, score, order, wallet, sell, credit, rate, profit, code, request):
         self.__user = user
         self.__password = password
         self.__product = product
@@ -12,21 +12,23 @@ class Shopkeeper:
         self.__rate = rate
         self.__profit = profit
         self.__code = code
+        self.__request = request
     @property
-    def user(self):
+    def user(self): 
         return self.__user
-
+    
     @user.setter
-    def user(self, value):
+    def user(self,value): 
         self.__user = value
+
     @property
-    def password(self):
+    def password(self): 
         return self.__password
 
     @password.setter
-    def password(self, value):
-        self.__password = value    
-    
+    def password(self,value): 
+        self.__password = value
+
     @property
     def product(self): 
         return self.__product
@@ -65,6 +67,7 @@ class Shopkeeper:
     @wallet.setter
     def wallet(self,wallet): 
         self.__wallet = wallet
+
     @property
     def sell(self): 
         return self.__sell
@@ -96,6 +99,8 @@ class Shopkeeper:
     @profit.setter
     def profit(self,profit_list): 
         self.__profit = profit_list
+    
+
     @property
     def code(self): 
         return self.__code
@@ -103,7 +108,15 @@ class Shopkeeper:
     @code.setter
     def code(self,code): 
         self.__code = code
+
+    @property
+    def request(self): 
+        return "SL"+self.__request
+
+    @request.setter
+    def request(self,request): 
+        self.__request ="SL"+request
+
     def __str__(self):
-        return 'user: {}   password: {}  product:{} location:{}  score:{} order:{}  wallet: {}   sell: {}   credit: {}   rate: {}    profit: {}    code:{}'\
-            .format(self.user, self.password, self.product ,self.location  ,self.score, self.order, self.wallet, self.sell, self.credit, self.rate, self.profit, self.code)
-                
+        return 'user: {}   password: {}  product:{} location:{}  score:{} order:{}  wallet: {}   sell: {}   credit: {}   rate: {}    profit: {}    code:{}   request:{}'\
+            .format(self.user, self.password, self.product ,self.location  ,self.score, self.order, self.wallet, self.sell, self.credit, self.rate, self.profit, self.code, self.request)
