@@ -19,3 +19,10 @@ class Shopkeeper:
     @user.setter
     def user(self, value):
         self.__user = value
+    @property
+    def password(self):
+        return self.__password
+
+    @password.setter
+    def password(self, value):
+        self.__password = value    
