@@ -95,4 +95,15 @@ class Shopkeeper:
 
     @profit.setter
     def profit(self,profit_list): 
-        self.__profit = profit_list            
+        self.__profit = profit_list
+    @property
+    def code(self): 
+        return self.__code
+
+    @code.setter
+    def code(self,code): 
+        self.__code = code
+    def __str__(self):
+        return 'user: {}   password: {}  product:{} location:{}  score:{} order:{}  wallet: {}   sell: {}   credit: {}   rate: {}    profit: {}    code:{}'\
+            .format(self.user, self.password, self.product ,self.location  ,self.score, self.order, self.wallet, self.sell, self.credit, self.rate, self.profit, self.code)
+                
