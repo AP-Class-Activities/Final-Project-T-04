@@ -39,3 +39,32 @@ class shop:
     @profit.setter
     def profit(self, new_profit):
         self.__profit = new_profit
+
+    @property
+    def sold_items(self):
+        return self.__sold_items
+
+    @sold_items.setter
+    def sold_items(self, new_sold_list):
+        self.__sold_items = new_sold_list
+
+    @property
+    def shopkeepers_list(self):
+        return self.__shopkeepers_list
+
+    @shopkeepers_list.setter
+    def shopkeepers_list(self, new_shopkeepers):
+        self.__shopkeepers_list = new_shopkeepers
+
+    @property
+    def customers_list(self):
+        return self.__customers_list
+
+    @customers_list.setter
+    def customers_list(self, new_customers):
+        self.__customers_list = new_customers
+
+    def __str__(self):
+        return 'user: {}  password:{}  location: {}  profit: {}  sold_items: {}  shopkeepers_list: {}  customers_list: {}'.format(
+            self.user, self.password, self.location, self.profit, self.sold_items, self.shopkeepers_list,
+            self.customers_list)
