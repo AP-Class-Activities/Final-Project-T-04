@@ -65,6 +65,6 @@ class shop:
         self.__customers_list = new_customers
 
     def __str__(self):
-        return  'user: {}  password:{}  location: {}  profit: {}  sold_items: {}  shopkeepers_list: {}  customers_list: {}'.format(
+        return 'user: {}  password:{}  location: {}  profit: {}  sold_items: {}  shopkeepers_list: {}  customers_list: {}'.format(
             self.user, self.password, self.location, self.profit, self.sold_items, self.shopkeepers_list,
             self.customers_list)
