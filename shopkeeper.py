@@ -64,4 +64,20 @@ class Shopkeeper:
 
     @wallet.setter
     def wallet(self,wallet): 
-        self.__wallet = wallet    
+        self.__wallet = wallet
+    @property
+    def sell(self): 
+        return self.__sell
+
+    @sell.setter
+    def sell(self,sell_list): 
+        self.__sell = sell_list
+    
+
+    @property
+    def credit(self): 
+        return self.__credit
+
+    @credit.setter
+    def credit(self,credit_list): 
+        self.__credit = credit_list        
