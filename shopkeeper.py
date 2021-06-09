@@ -80,4 +80,19 @@ class Shopkeeper:
 
     @credit.setter
     def credit(self,credit_list): 
-        self.__credit = credit_list        
+        self.__credit = credit_list
+    @property
+    def rate(self): 
+        return self.__rate
+
+    @rate.setter
+    def wallet(self,rate_list): 
+        self.__rate = rate_list
+
+    @property
+    def profit(self): 
+        return self.__profit
+
+    @profit.setter
+    def profit(self,profit_list): 
+        self.__profit = profit_list            
