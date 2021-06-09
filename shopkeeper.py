@@ -47,3 +47,10 @@ class Shopkeeper:
     @favourite.setter
     def favourite(self, fav_list):
         self.__favourite = fav_lists
+    @property
+    def bought_items(self):
+        return self.__bought_items
+
+    @bought_items.setter
+    def bought_items(self, bought_list):
+        self.__bought_items = bought_list
