@@ -40,3 +40,10 @@ class Shopkeeper:
     @cart.setter
     def cart(self, cart_list):
         self.__cart = cart_list
+    @property
+    def favourite(self):
+        return self.__favourite
+
+    @favourite.setter
+    def favourite(self, fav_list):
+        self.__favourite = fav_lists
