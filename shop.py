@@ -77,3 +77,74 @@ class shop:
         return 'name: {}   products: {} location:{} shop_id:{}  add:{}  delete:{}  destination:{}  comission:{}' \
             .format(self.name, self.products, self.location, self.shop_id, self.add, self.delete, self.destination,
                     self.comission)
+class product:
+    def __init__(self,name,count,code):
+        self.__name = name
+        self.__count = count
+        self.__code = code    
+        
+    @property
+    def name(self): 
+        return self.__name
+
+    @name.setter
+    def name(self,value): 
+        self.__name = value
+    @property
+    def count(self): 
+        return self.__count
+    
+    @count.setter
+    def count(self,count_list): 
+        self.__count = count_list
+
+    @property
+    def code(self): 
+        return 'PR'+self.__code
+    
+    @code.setter
+    def code(self,code_counter): 
+        self.__code = "PR"+ code_counter
+
+    def __str__(self): 
+        return 'code: {}   name: {}   count: {}  '\
+            .format(self.code,self.name, self.count)
+
+class offcode:
+    def __init__(self,title,expiration,total,products):
+        self.__title = title
+        self.__expiration = expiration
+        self.__total = total
+        self.__products = products
+    @property
+    def title(self): 
+        return self.__title
+    
+    @title.setter
+    def title(self,title): 
+        self.__title = title
+    @property
+    def expiration(self): 
+        return self.__expiration
+    
+    @expiration.setter
+    def expiration(self,expiration): 
+        self.__expiration = expiration
+    @property
+    def total(self): 
+        return self.__total
+    
+    @total.setter
+    def total(self,total): 
+        self.__total = total
+    @property
+    def products(self): 
+        return self.__products
+    
+    @products.setter
+    def products(self,products): 
+        self.__products = products
+
+    def __str__(self): 
+        return 'title: {}   expiration: {}   total: {}   products: {}  '\
+            .format(self.title,self.expiration, self.total, self.products)
