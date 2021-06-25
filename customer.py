@@ -86,11 +86,11 @@ class customer:
 
     @property
     def ID(self):
-        return "CU"+self.__id
+        return "CU"+self.__Id
 
     @ID.setter
     def ID(self, customer_counter):
-        self.__id = "CU"+customer_counter
+        self.__Id = "CU"+customer_counter
         
     @property
     def email(self):
