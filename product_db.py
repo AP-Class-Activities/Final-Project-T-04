@@ -34,3 +34,9 @@ class DataBase:
                     return 1
         else:
             return 0
+    def delete(self,value):
+        key = self.search(value)
+        temp = self.read_list()
+        temp.remove(key)
+        file = open(self.name,"w")
+        json.dump(temp,file)
