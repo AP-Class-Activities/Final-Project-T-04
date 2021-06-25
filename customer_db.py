@@ -20,3 +20,19 @@ class DataBase:
             json.dump(temp,file)
             print("user added!")
             return 1
+    def search(self,key):
+        lst = self.read_list()
+        for dictionaries in lst:
+            for j,i in dictionaries.items():
+                if key == i:
+                    return dictionaries,1
+        else:
+            return "User not found!!!!",0
+    def search_value(self,value):
+        lst = self.read_list()
+        for dictionaries in lst:
+            for j,i in dictionaries.items():
+                if value == i:
+                    return 1
+        else:
+            return 0
