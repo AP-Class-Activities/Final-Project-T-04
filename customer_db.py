@@ -42,3 +42,12 @@ class DataBase:
         temp.remove(key)
         file = open(self.name,"w")
         json.dump(temp,file)
+    def check(self, username, password):
+        lst = self.read_list()
+        for dictionary in lst:
+            user = dictionary["user"]
+            passw = dictionary["password"]
+            if user == username and passw == password:
+                return True
+        else:
+            return False
