@@ -1,14 +1,33 @@
 class customer:
-    def __init__(self, user, password, wallet, cart, favourite, bought_items, score, id):
+    def __init__(self, name, last_name, user, password, email, wallet, cart, favourite, bought_items, score, Id):
+        self.__name = name
+        self.__last = last_name
         self.__user = user
         self.__password = password
+        self.__email = email
         self.__wallet = wallet
         self.__cart = cart
         self.__favourite = favourite
         self.__bought_items = bought_items
         self.__score = score
-        self.__id = id
+        self.__Id = Id
+        
+    @property
+    def name(self):
+        return self.__name
 
+    @name.setter
+    def name(self, value):
+        self.__name = value
+        
+    @property
+    def last(self):
+        return self.__last
+
+    @last.setter
+    def last(self, value):
+        self.__last = value
+    
     @property
     def user(self):
         return self.__user
@@ -72,7 +91,15 @@ class customer:
     @ID.setter
     def ID(self, customer_counter):
         self.__id = "CU"+customer_counter
+        
+    @property
+    def email(self):
+        return self.__email
 
+    @email.setter
+    def ID(self, value):
+        self.__email = value
+        
     def __str__(self):
-        return 'user: {}   password: {}    wallet: {}   cart: {}   favourite: {}   bought_items: {}    score: {}    ID:{}\n'\
-        .format(self.user, self.password, self.wallet, self.cart, self.favourite, self.bought_items, self.score, self.ID)
+        return '{"name":"%b","last name":"%b","user":"%b","password":"%b","email":"%b","wallet":%i,"cart":[%b],"favourites":[%b],"bought_items":[%b],"score":%i,"ID":"%b"}'\
+        .format(self.name, self.last, self.user, self.password, self.email, self.wallet, self.cart, self.favourite, self.bought_items, self.score, self.ID)
