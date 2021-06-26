@@ -79,11 +79,12 @@ class shop:
                     self.comission)
 
 class offcode:
-    def __init__(self,title,expiration,total,products):
+    def __init__(self,title,expiration,total,products,percent):
         self.__title = title
         self.__expiration = expiration
         self.__total = total
         self.__products = products
+        self.__percent = percent
     @property
     def title(self): 
         return self.__title
@@ -113,6 +114,15 @@ class offcode:
     def products(self,products): 
         self.__products = products
 
-    def __str__(self): 
-        return 'title: {}   expiration: {}   total: {}   products: {}  '\
-            .format(self.title,self.expiration, self.total, self.products)
+    @property
+    def percent(self): 
+        return self.__percent
+    
+    @percent.setter
+    def percent(self,value): 
+        self.__percent = value
+    
+
+    def dict(self):
+        A = {"title":self.title , "expiration":self.expiration , "total":self.total, "products":self.products, "percent":self.percent}
+        return A
