@@ -1,12 +1,15 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-import   customerpyqt  as  C2
-import   signup as SI2
-class Ui_MainWindow(object):
+import signup
+import customer
+import shopkeeper
+import admin
+class Ui_MainWindowwelcome(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 800)
         MainWindow.setMaximumSize(QtCore.QSize(800, 800))
         MainWindow.setStyleSheet("background-color:rgb(26, 26, 26)")
+        self.MainWindow = MainWindow
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -111,29 +114,45 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "Welcome"))
         self.pushButton.setText(_translate("MainWindow", "Sign Up"))
+        self.pushButton.clicked.connect(self.gotowin2)
         self.pushButton_2.setText(_translate("MainWindow", "Admin"))
+        self.pushButton_2.clicked.connect(self.gotowin9)
         self.pushButton_3.setText(_translate("MainWindow", "Customer"))
+        self.pushButton_3.clicked.connect(self.gotowin4)
         self.pushButton_4.setText(_translate("MainWindow", "shopkeeper"))
+        self.pushButton_4.clicked.connect(self.gotowin6)
+    def gotowin2(self):                        #vasl kardane welcome b signup
+        self.mw = QtWidgets.QMainWindow()
+        self.win2 = signup.Ui_MainWindowsignup()
+        self.win2.setupUi(self.mw)
+        self.MainWindow.hide()
+        self.mw.show()    
 
+    def gotowin4(self):                        #vasl kardane welcome b customer
+        self.mw2 = QtWidgets.QMainWindow()
+        self.win4 = customer.Ui_MainWindowcustomer()
+        self.win4.setupUi(self.mw2)
+        self.MainWindow.hide()
+        self.mw2.show()    
+    
+    def gotowin6(self):                        #vasl kardane welcome b shopkeeper
+        self.mw4 = QtWidgets.QMainWindow()
+        self.win6 = shopkeeper.Ui_MainWindowshopkeeper()
+        self.win6.setupUi(self.mw4)
+        self.MainWindow.hide()
+        self.mw4.show()    
 
+    def gotowin9(self):                        #vasl kardane welcome b admin
+        self.mw7 = QtWidgets.QMainWindow()
+        self.win9 = admin.Ui_MainWindowadmin()
+        self.win9.setupUi(self.mw7)
+        self.MainWindow.hide()
+        self.mw7.show()    
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = Ui_MainWindowwelcome()
     ui.setupUi(MainWindow)
     MainWindow.show()
-    c2=C2.Ui_MainWindowcustomerpyqt ()
-    customerpyqt=QtWidgets.QMainWindow ()
-    c2.setupUi(customerpyqt)
-    ui.pushButton_3.clicked.connect(lambda : customerpyqt.show())
-    ui.pushButton_3.clicked.connect(lambda : MainWindow.close())
-    si2=SI2.Ui_MainWindowsignup ()
-    signup=QtWidgets.QMainWindow ()
-    si2.setupUi(signup)
-    ui.pushButton.clicked.connect(lambda : signup.show())
-    ui.pushButton.clicked.connect(lambda : MainWindow.close())
-    
-
-
     sys.exit(app.exec_())
