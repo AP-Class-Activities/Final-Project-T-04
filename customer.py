@@ -1,107 +1,154 @@
-class customer:
-    def __init__(self, name, last_name, user, password, email, wallet, cart, favourite, bought_items, score, Id):
-        self.__name = name
-        self.__last = last_name
-        self.__user = user
-        self.__password = password
-        self.__email = email
-        self.__wallet = wallet
-        self.__cart = cart
-        self.__favourite = favourite
-        self.__bought_items = bought_items
-        self.__score = score
-        self.__Id = Id
-        
-    @property
-    def name(self):
-        return self.__name
+from PyQt5 import QtCore, QtGui, QtWidgets
+import  welcome
 
-    @name.setter
-    def name(self, value):
-        self.__name = value
-        
-    @property
-    def last(self):
-        return self.__last
+class Ui_MainWindowcustomer(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(800, 800)
+        MainWindow.setMaximumSize(QtCore.QSize(800, 800))
+        font = QtGui.QFont()
+        font.setPointSize(26)
+        MainWindow.setFont(font)
+        MainWindow.setStyleSheet("background-color:rgb(26, 26, 26)")
+        MainWindow.setTabShape(QtWidgets.QTabWidget.Triangular)
+        self.MainWindow = MainWindow
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit.setGeometry(QtCore.QRect(190, 280, 420, 81))
+        self.lineEdit.setMaximumSize(QtCore.QSize(420, 81))
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        self.lineEdit.setFont(font)
+        self.lineEdit.setStyleSheet("QLineEdit{\n"
+"    border: 2px solid rgb(38, 38, 48);\n"
+"    border-radius: 15px;\n"
+"    color: #FFF;\n"
+"\n"
+"    background-color: rgb(36, 36, 36);\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    border: 2px solid rgb(48, 50, 62)\n"
+"}\n"
+"\n"
+"QLineEdit:focus{\n"
+"    border: 2px solid rgb(35, 218, 233)\n"
+"\n"
+"    background-color: rgb(47, 47, 47)\n"
+"}")
+        self.lineEdit.setObjectName("lineEdit")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_2.setGeometry(QtCore.QRect(190, 420, 420, 81))
+        self.lineEdit_2.setMaximumSize(QtCore.QSize(420, 81))
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        self.lineEdit_2.setFont(font)
+        self.lineEdit_2.setStyleSheet("QLineEdit{\n"
+"    border: 2px solid rgb(38, 38, 48);\n"
+"    border-radius: 15px;\n"
+"    color: #FFF;\n"
+"\n"
+"    background-color: rgb(36, 36, 36);\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    border: 2px solid rgb(48, 50, 62)\n"
+"}\n"
+"\n"
+"QLineEdit:focus{\n"
+"    border: 2px solid rgb(35, 218, 233)\n"
+"\n"
+"    background-color: rgb(47, 47, 47)\n"
+"}")
+        self.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(190, 560, 420, 81))
+        self.pushButton.setMaximumSize(QtCore.QSize(420, 81))
+        font = QtGui.QFont()
+        font.setPointSize(22)
+        self.pushButton.setFont(font)
+        self.pushButton.setStyleSheet("QPushButton{\n"
+"    border-radius: 15px;\n"
+"\n"
+"    background-color: rgb(30, 200, 200);\n"
+"\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"\n"
+"    background-color: rgb(26, 179, 179)\n"
+"}")
+        self.pushButton.setFlat(False)
+        self.pushButton.setObjectName("pushButton")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(250, 110, 300, 91))
+        self.label.setMaximumSize(QtCore.QSize(300, 91))
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        self.label.setFont(font)
+        self.label.setStyleSheet("color: rgb(255, 255, 255)")
+        self.label.setObjectName("label")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(300, 680, 211, 41))
+        self.pushButton_2.setMaximumSize(QtCore.QSize(420, 81))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.pushButton_2.setFont(font)
+        self.pushButton_2.setStyleSheet("QPushButton{\n"
+"     border-radius: 15px;\n"
+"\n"
+"    background-color: rgb(143, 214, 214);\n"
+"\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"\n"
+"    background-color: rgb(113, 169, 169);\n"
+"}")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("Back Icons – Free Vector Download, PNG, SVG, GIF_files/circled-left(4).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_2.setIcon(icon)
+        self.pushButton_2.setIconSize(QtCore.QSize(20, 20))
+        self.pushButton_2.setFlat(False)
+        self.pushButton_2.setObjectName("pushButton_2")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 18))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
 
-    @last.setter
-    def last(self, value):
-        self.__last = value
-    
-    @property
-    def user(self):
-        return self.__user
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    @user.setter
-    def user(self, value):
-        self.__user = value
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.lineEdit.setPlaceholderText(_translate("MainWindow", "username"))
+        self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "password"))
+        self.pushButton.setText(_translate("MainWindow", "Login"))
+        self.label.setText(_translate("MainWindow", "customer"))
+        self.pushButton_2.setText(_translate("MainWindow", "back"))
+        self.pushButton_2.clicked.connect(self.gotowin5)
+    def gotowin5(self):                             #back b welcome
+        self.mw3 = QtWidgets.QMainWindow()
+        self.win5 = welcome.Ui_MainWindowwelcome()
+        self.win5.setupUi(self.mw3)
+        self.MainWindow.hide()
+        self.mw3.show()    
 
-    @property
-    def password(self):
-        return self.__password
 
-    @password.setter
-    def password(self, value):
-        self.__password = value
-
-    @property
-    def wallet(self):
-        return self.__wallet
-
-    @wallet.setter
-    def wallet(self, value):
-        self.__wallet = value
-
-    @property
-    def cart(self):
-        return self.__cart
-
-    @cart.setter
-    def cart(self, cart_list):
-        self.__cart = cart_list
-
-    @property
-    def favourite(self):
-        return self.__favourite
-
-    @favourite.setter
-    def favourite(self, fav_list):
-        self.__favourite = fav_list
-
-    @property
-    def bought_items(self):
-        return self.__bought_items
-
-    @bought_items.setter
-    def bought_items(self, bought_list):
-        self.__bought_items = bought_list
-
-    @property
-    def score(self):
-        return self.__score
-
-    @score.setter
-    def score(self, new_score):
-        self.__score = new_score
-
-    @property
-    def ID(self):
-        return "CU"+self.__Id
-
-    @ID.setter
-    def ID(self, customer_counter):
-        self.__Id = "CU"+customer_counter
-        
-    @property
-    def email(self):
-        return self.__email
-
-    @email.setter
-    def ID(self, value):
-        self.__email = value
-        
-    def dict(self):
-        A = {"name":self.name ,"last name":self.last , "user":self.user , "password":self.password , "email":self.email , "wallet":self.wallet , "cart":self.cart , "favourite":self.favourite , "bought items":self.bought_items , "score":self.score , "ID":self.ID}
-        return A
-#A = customer("Hamed","Teymouri","XviL","ha113","htm133@gmail.com",10000,["xbox one" , "ps4"],["ps5"],["watch"],60,"213245")
-#B = A.dict()
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
