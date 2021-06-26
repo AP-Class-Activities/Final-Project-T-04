@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import   customerpyqt  as  C2
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -123,4 +123,10 @@ if __name__ == "__main__":
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
+    c2=C2.Ui_MainWindowcustomerpyqt ()
+    customerpyqt=QtWidgets.QMainWindow ()
+    c2.setupUi(customerpyqt)
+    ui.pushButton_3.clicked.connect(lambda : customer.show())
+    ui.pushButton_3.clicked.connect(lambda : MainWindow.close())
+
     sys.exit(app.exec_())
