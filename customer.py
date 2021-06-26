@@ -100,6 +100,8 @@ class customer:
     def ID(self, value):
         self.__email = value
         
-    def __str__(self):
-        return '{"name":"%b","last name":"%b","user":"%b","password":"%b","email":"%b","wallet":%i,"cart":[%b],"favourites":[%b],"bought_items":[%b],"score":%i,"ID":"%b"}'\
-        .format(self.name, self.last, self.user, self.password, self.email, self.wallet, self.cart, self.favourite, self.bought_items, self.score, self.ID)
+    def dict(self):
+        A = {"name":self.name ,"last name":self.last , "user":self.user , "password":self.password , "email":self.email , "wallet":self.wallet , "cart":self.cart , "favourite":self.favourite , "bought items":self.bought_items , "score":self.score , "ID":self.ID}
+        return A
+#A = customer("Hamed","Teymouri","XviL","ha113","htm133@gmail.com",10000,["xbox one" , "ps4"],["ps5"],["watch"],60,"213245")
+#B = A.dict()
