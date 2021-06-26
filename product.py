@@ -63,5 +63,8 @@ class product:
     @discription.setter
     def discription(self,value): 
         self.__discription = value
-
+    
+    def dict(self):
+        A = {"name":self.name , "count":self.count , "code":self.code , "sellers":self.sellers , "score":self.score , "comments":self.comments , "discription":self.discription}
+        return A
 

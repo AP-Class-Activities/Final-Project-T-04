@@ -77,38 +77,6 @@ class shop:
         return 'name: {}   products: {} location:{} shop_id:{}  add:{}  delete:{}  destination:{}  comission:{}' \
             .format(self.name, self.products, self.location, self.shop_id, self.add, self.delete, self.destination,
                     self.comission)
-class product:
-    def __init__(self,name,count,code):
-        self.__name = name
-        self.__count = count
-        self.__code = code    
-        
-    @property
-    def name(self): 
-        return self.__name
-
-    @name.setter
-    def name(self,value): 
-        self.__name = value
-    @property
-    def count(self): 
-        return self.__count
-    
-    @count.setter
-    def count(self,count_list): 
-        self.__count = count_list
-
-    @property
-    def code(self): 
-        return 'PR'+self.__code
-    
-    @code.setter
-    def code(self,code_counter): 
-        self.__code = "PR"+ code_counter
-
-    def __str__(self): 
-        return 'code: {}   name: {}   count: {}  '\
-            .format(self.code,self.name, self.count)
 
 class offcode:
     def __init__(self,title,expiration,total,products):
