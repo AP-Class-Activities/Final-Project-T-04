@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import welcome
 
 class Ui_MainWindowsignup(object):
     def setupUi(self, MainWindow):
@@ -11,6 +11,7 @@ class Ui_MainWindowsignup(object):
         MainWindow.setFont(font)
         MainWindow.setStyleSheet("background-color:rgb(26, 26, 26)\n"
 "")
+        self.MainWindow = MainWindow
         MainWindow.setTabShape(QtWidgets.QTabWidget.Triangular)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -180,18 +181,24 @@ class Ui_MainWindowsignup(object):
         self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "password"))
         self.lineEdit_3.setPlaceholderText(_translate("MainWindow", "Email"))
         self.commandLinkButton_2.setText(_translate("MainWindow", "back"))
+        self.commandLinkButton_2.clicked.connect(self.gotowin3)
         self.pushButton.setText(_translate("MainWindow", "Sign Up"))
         self.lineEdit_4.setPlaceholderText(_translate("MainWindow", "username"))
         self.comboBox.setItemText(0, _translate("MainWindow", "customer"))
         self.comboBox.setItemText(1, _translate("MainWindow", "shopkeeper"))
         self.comboBox.setItemText(2, _translate("MainWindow", "admin"))
-
+    def gotowin3(self):                             #back b welcome
+        self.mw1 = QtWidgets.QMainWindow()
+        self.win3 = welcome.Ui_MainWindowwelcome()
+        self.win3.setupUi(self.mw1)
+        self.MainWindow.hide()
+        self.mw1.show()    
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = Ui_MainWindowsignup()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
