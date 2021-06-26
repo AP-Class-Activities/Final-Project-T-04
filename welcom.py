@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import   customerpyqt  as  C2
-
+import   signup as SI2
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -128,5 +128,12 @@ if __name__ == "__main__":
     c2.setupUi(customerpyqt)
     ui.pushButton_3.clicked.connect(lambda : customerpyqt.show())
     ui.pushButton_3.clicked.connect(lambda : MainWindow.close())
+    si2=SI2.Ui_MainWindowsignup ()
+    signup=QtWidgets.QMainWindow ()
+    si2.setupUi(signup)
+    ui.pushButton.clicked.connect(lambda : signup.show())
+    ui.pushButton.clicked.connect(lambda : MainWindow.close())
+    
+
 
     sys.exit(app.exec_())
