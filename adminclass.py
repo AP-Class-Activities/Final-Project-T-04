@@ -1,7 +1,5 @@
 class admin:
-    def __init__(self, name, last_name, user, password, location, email, ListOfCustomers, ListOfShopkeepers):
-        self.__name = name
-        self.__last = last_name
+    def __init__(self, user, password, location, email, ListOfCustomers, ListOfShopkeepers):
         self.__user = user
         self.__password = password
         self.__location = location
@@ -9,21 +7,6 @@ class admin:
         self.__customers = ListOfCustomers
         self.__shopkeepers = ListOfShopkeepers
 
-    @property
-    def name(self):
-        return self.__name
-
-    @name.setter
-    def name(self, value):
-        self.__name = value
-
-    @property
-    def last(self):
-        return self.__last
-
-    @last.setter
-    def last(self, value):
-        self.__last = value
     
     @property
     def user(self):
@@ -74,5 +57,5 @@ class admin:
         self.__location = "Sarvestan St. , Elahieh , Tehran , Iran"
 
     def dict(self):
-        A = {"name":self.name ,"last name":self.last , "user":self.user , "password":self.password , "email":self.email , "Shop location": self.location}
+        A = {"user":self.user , "password":self.password , "email":self.email , "Shop location": self.location,"shopkeepers":self.shopkeepers,"customers":self.customers}
         return A

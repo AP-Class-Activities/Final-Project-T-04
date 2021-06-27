@@ -1,7 +1,5 @@
 class customer:
-    def __init__(self, name, last_name, user, password, email, wallet, cart, favourite, bought_items, score, Id):
-        self.__name = name
-        self.__last = last_name
+    def __init__(self, user, password, email, wallet, cart, favourite, bought_items, score, Id):
         self.__user = user
         self.__password = password
         self.__email = email
@@ -101,7 +99,7 @@ class customer:
         self.__email = value
         
     def dict(self):
-        A = {"name":self.name ,"last name":self.last , "user":self.user , "password":self.password , "email":self.email , "wallet":self.wallet , "cart":self.cart , "favourite":self.favourite , "bought items":self.bought_items , "score":self.score , "ID":self.ID}
+        A = {"user":self.user , "password":self.password , "email":self.email , "wallet":self.wallet , "cart":self.cart , "favourite":self.favourite , "bought items":self.bought_items , "score":self.score , "ID":self.ID}
         return A
-#A = customer("Hamed","Teymouri","XviL","ha113","htm133@gmail.com",10000,["xbox one" , "ps4"],["ps5"],["watch"],60,"213245")
+#A = customer("XviL","ha113","htm133@gmail.com",10000,["xbox one" , "ps4"],["ps5"],["watch"],60,"213245")
 #B = A.dict()
