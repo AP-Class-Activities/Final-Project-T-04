@@ -51,3 +51,27 @@ class DataBase:
                 return True
         else:
             return False
+    def products(self,ID,new_product):
+        dictionary = self.search(ID)
+        comment = dictionary["products"].append(new_product)
+        delete = self.delete(ID)
+        temp = self.read_list()
+        temp.append(dictionary)
+        file = open(self.name,"w")
+        json.dump(temp,file)
+    def sold_items(self,ID,value):
+        dictionary = self.search(ID)
+        comment = dictionary["sold items"].append(value)
+        delete = self.delete(ID)
+        temp = self.read_list()
+        temp.append(dictionary)
+        file = open(self.name,"w")
+        json.dump(temp,file)
+    def orders(self,ID,value):
+        dictionary = self.search(ID)
+        comment = dictionary["orders"].append(value)
+        delete = self.delete(ID)
+        temp = self.read_list()
+        temp.append(dictionary)
+        file = open(self.name,"w")
+        json.dump(temp,file)
