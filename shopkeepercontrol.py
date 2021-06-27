@@ -1,6 +1,5 @@
-
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import shop
 
 class Ui_MainWindowshopkeepercontrol(object):
     def setupUi(self, MainWindow):
@@ -266,7 +265,16 @@ class Ui_MainWindowshopkeepercontrol(object):
         self.label_6.setText(_translate("MainWindow", "destination"))
         self.label_4.setText(_translate("MainWindow", "rank"))
         self.pushButton_2.setText(_translate("MainWindow", "shop"))
+        self.pushButton_2.clicked.connect(self.gotowin12)
         self.pushButton_3.setText(_translate("MainWindow", "add"))
+
+    def gotowin12(self):                        #vasl  b shop
+        self.mw10 = QtWidgets.QMainWindow()
+        self.win12 = shop.Ui_MainWindowshop()
+        self.win12.setupUi(self.mw10)
+        self.MainWindow.hide()
+        self.mw10.show()    
+
 
 
 if __name__ == "__main__":
