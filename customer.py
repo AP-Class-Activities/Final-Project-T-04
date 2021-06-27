@@ -1,5 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import  welcome
+import shop
 
 class Ui_MainWindowcustomer(object):
     def setupUi(self, MainWindow):
@@ -133,6 +134,7 @@ class Ui_MainWindowcustomer(object):
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "username"))
         self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "password"))
         self.pushButton.setText(_translate("MainWindow", "Login"))
+        self.pushButton.clicked.connect(self.gotowin14)
         self.label.setText(_translate("MainWindow", "customer"))
         self.pushButton_2.setText(_translate("MainWindow", "back"))
         self.pushButton_2.clicked.connect(self.gotowin5)
@@ -143,12 +145,19 @@ class Ui_MainWindowcustomer(object):
         self.MainWindow.hide()
         self.mw3.show()    
 
+    def gotowin14(self):                             #login b shop
+        self.mw12 = QtWidgets.QMainWindow()
+        self.win14 = shop.Ui_MainWindowshop()
+        self.win14.setupUi(self.mw12)
+        self.MainWindow.hide()
+        self.mw12.show()    
+
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = Ui_MainWindowcustomer()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
