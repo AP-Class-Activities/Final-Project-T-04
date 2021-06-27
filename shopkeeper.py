@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import  welcome
-
+import  shopkeepercontrol
 class Ui_MainWindowshopkeeper(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -133,6 +133,7 @@ class Ui_MainWindowshopkeeper(object):
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "username"))
         self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "password"))
         self.pushButton.setText(_translate("MainWindow", "Login"))
+        self.pushButton.clicked.connect(self.gotowin11)
         self.label.setText(_translate("MainWindow", "shopkeeper"))
         self.pushButton_2.setText(_translate("MainWindow", "back"))
         self.pushButton_2.clicked.connect(self.gotowin7)
@@ -143,6 +144,13 @@ class Ui_MainWindowshopkeeper(object):
         self.MainWindow.hide()
         self.mw5.show()    
 
+
+    def gotowin11(self):                             #VASL B SHOPKEEPERCONTROL
+        self.mw9 = QtWidgets.QMainWindow()
+        self.win11 = shopkeepercontrol.Ui_MainWindowshopkeepercontrol()
+        self.win11.setupUi(self.mw9)
+        self.MainWindow.hide()
+        self.mw9.show()    
 
 if __name__ == "__main__":
     import sys
