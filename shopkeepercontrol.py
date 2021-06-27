@@ -1,10 +1,12 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import shop
 import addproducts
+import welcome
 class Ui_MainWindowshopkeepercontrol(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 800)
+        MainWindow.setMinimumSize(QtCore.QSize(800, 800))
         MainWindow.setMaximumSize(QtCore.QSize(800, 800))
         MainWindow.setStyleSheet("background-color:rgb(0, 0, 0)")
         self.MainWindow = MainWindow
@@ -18,111 +20,109 @@ class Ui_MainWindowshopkeepercontrol(object):
         self.lineEdit_2.setGeometry(QtCore.QRect(-10, 30, 651, 41))
         self.lineEdit_2.setStyleSheet("background-color:rgb(255, 170, 0);")
         self.lineEdit_2.setObjectName("lineEdit_2")
+        self.label_7 = QtWidgets.QLabel(self.centralwidget)
+        self.label_7.setGeometry(QtCore.QRect(570, 80, 221, 81))
+        self.label_7.setMinimumSize(QtCore.QSize(141, 61))
+        self.label_7.setText("")
+        self.label_7.setPixmap(QtGui.QPixmap("../Downloads/logo22.jpg"))
+        self.label_7.setScaledContents(True)
+        self.label_7.setObjectName("label_7")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(430, 600, 91, 41))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.pushButton.setFont(font)
+        self.pushButton.setStyleSheet("QPushButton{\n"
+"     border-radius: 15px;\n"
+"\n"
+"    background-color:rgb(255, 170, 0);\n"
+"\n"
+"    color:black;\n"
+"}")
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(600, 600, 91, 41))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.pushButton_2.setFont(font)
+        self.pushButton_2.setStyleSheet("QPushButton{\n"
+"     border-radius: 15px;\n"
+"\n"
+"    background-color:rgb(143, 214, 214);\n"
+"\n"
+"    color:black;\n"
+"}")
+        self.pushButton_2.setObjectName("pushButton_2")
         self.lineEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_3.setGeometry(QtCore.QRect(170, 580, 81, 41))
+        self.lineEdit_3.setGeometry(QtCore.QRect(190, 320, 91, 51))
         self.lineEdit_3.setStyleSheet("QLineEdit{\n"
 "     border-radius: 15px;\n"
 "\n"
 "    background-color: rgb(143, 214, 214);\n"
 "\n"
 "    color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-"\n"
-"    background-color: rgb(113, 169, 169);\n"
 "}")
         self.lineEdit_3.setObjectName("lineEdit_3")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(40, 470, 101, 51))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label.setFont(font)
-        self.label.setStyleSheet("QLabel {\n"
-"     border-radius: 15px;\n"
-"\n"
-"    background-color:rgb(255, 170, 0);\n"
-"\n"
-"    color:black;\n"
-"}")
-        self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setObjectName("label")
-        self.listView_2 = QtWidgets.QListView(self.centralwidget)
-        self.listView_2.setGeometry(QtCore.QRect(335, 220, 381, 261))
-        self.listView_2.setStyleSheet("QListView{\n"
-"     border-radius: 15px;\n"
-"\n"
-"    background-color: rgb(143, 214, 214);\n"
-"\n"
-"    color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QListView:hover{\n"
-"\n"
-"    background-color: rgb(113, 169, 169);\n"
-"}")
-        self.listView_2.setFrameShape(QtWidgets.QFrame.NoFrame)
-        self.listView_2.setLineWidth(17)
-        self.listView_2.setObjectName("listView_2")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(420, 160, 161, 41))
-        font = QtGui.QFont()
-        font.setPointSize(22)
-        self.label_2.setFont(font)
-        self.label_2.setStyleSheet("color:white;\n"
-"background-color:#ffff;")
-        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_2.setObjectName("label_2")
         self.lineEdit_4 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_4.setGeometry(QtCore.QRect(170, 200, 81, 41))
+        self.lineEdit_4.setGeometry(QtCore.QRect(190, 520, 91, 51))
         self.lineEdit_4.setStyleSheet("QLineEdit{\n"
 "     border-radius: 15px;\n"
 "\n"
 "    background-color: rgb(143, 214, 214);\n"
 "\n"
 "    color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-"\n"
-"    background-color: rgb(113, 169, 169);\n"
 "}")
         self.lineEdit_4.setObjectName("lineEdit_4")
+        self.lineEdit_5 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_5.setGeometry(QtCore.QRect(190, 420, 91, 51))
+        self.lineEdit_5.setStyleSheet("QLineEdit{\n"
+"     border-radius: 15px;\n"
+"\n"
+"    background-color: rgb(143, 214, 214);\n"
+"\n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.lineEdit_5.setObjectName("lineEdit_5")
         self.lineEdit_6 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_6.setGeometry(QtCore.QRect(170, 280, 81, 41))
+        self.lineEdit_6.setGeometry(QtCore.QRect(190, 220, 91, 51))
         self.lineEdit_6.setStyleSheet("QLineEdit{\n"
 "     border-radius: 15px;\n"
 "\n"
 "    background-color: rgb(143, 214, 214);\n"
 "\n"
 "    color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-"\n"
-"    background-color: rgb(113, 169, 169);\n"
 "}")
         self.lineEdit_6.setObjectName("lineEdit_6")
-        self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(40, 200, 101, 51))
+        self.lineEdit_8 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_8.setGeometry(QtCore.QRect(190, 610, 91, 51))
+        self.lineEdit_8.setStyleSheet("QLineEdit{\n"
+"     border-radius: 15px;\n"
+"\n"
+"    background-color: rgb(143, 214, 214);\n"
+"\n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.lineEdit_8.setObjectName("lineEdit_8")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(50, 230, 91, 51))
         font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label_3.setFont(font)
-        self.label_3.setStyleSheet("QLabel {\n"
+        font.setPointSize(12)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet("QLabel{\n"
 "     border-radius: 15px;\n"
 "\n"
 "    background-color:rgb(255, 170, 0);\n"
 "\n"
 "    color:black;\n"
 "}")
-        self.label_3.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_3.setObjectName("label_3")
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName("label_2")
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(40, 280, 101, 51))
+        self.label_5.setGeometry(QtCore.QRect(50, 520, 91, 51))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(12)
         self.label_5.setFont(font)
-        self.label_5.setStyleSheet("QLabel {\n"
+        self.label_5.setStyleSheet("QLabel{\n"
 "     border-radius: 15px;\n"
 "\n"
 "    background-color:rgb(255, 170, 0);\n"
@@ -131,41 +131,40 @@ class Ui_MainWindowshopkeepercontrol(object):
 "}")
         self.label_5.setAlignment(QtCore.Qt.AlignCenter)
         self.label_5.setObjectName("label_5")
-        self.label_6 = QtWidgets.QLabel(self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(40, 380, 101, 51))
+        self.label_8 = QtWidgets.QLabel(self.centralwidget)
+        self.label_8.setGeometry(QtCore.QRect(50, 610, 91, 51))
         font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_6.setFont(font)
-        self.label_6.setStyleSheet("QLabel {\n"
+        font.setPointSize(12)
+        self.label_8.setFont(font)
+        self.label_8.setStyleSheet("QLabel{\n"
 "     border-radius: 15px;\n"
 "\n"
 "    background-color:rgb(255, 170, 0);\n"
 "\n"
 "    color:black;\n"
 "}")
-        self.label_6.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_6.setObjectName("label_6")
-        self.lineEdit_7 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_7.setGeometry(QtCore.QRect(170, 380, 81, 41))
-        self.lineEdit_7.setStyleSheet("QLineEdit{\n"
+        self.label_8.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_8.setObjectName("label_8")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(50, 320, 91, 51))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_3.setFont(font)
+        self.label_3.setStyleSheet("QLabel{\n"
 "     border-radius: 15px;\n"
 "\n"
-"    background-color: rgb(143, 214, 214);\n"
+"    background-color:rgb(255, 170, 0);\n"
 "\n"
-"    color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-"\n"
-"    background-color: rgb(113, 169, 169);\n"
+"    color:black;\n"
 "}")
-        self.lineEdit_7.setObjectName("lineEdit_7")
+        self.label_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(40, 580, 101, 51))
+        self.label_4.setGeometry(QtCore.QRect(50, 420, 91, 51))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(9)
         self.label_4.setFont(font)
-        self.label_4.setStyleSheet("QLabel {\n"
+        self.label_4.setStyleSheet("QLabel{\n"
 "     border-radius: 15px;\n"
 "\n"
 "    background-color:rgb(255, 170, 0);\n"
@@ -174,75 +173,43 @@ class Ui_MainWindowshopkeepercontrol(object):
 "}")
         self.label_4.setAlignment(QtCore.Qt.AlignCenter)
         self.label_4.setObjectName("label_4")
-        self.lineEdit_5 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_5.setGeometry(QtCore.QRect(170, 470, 81, 41))
-        self.lineEdit_5.setStyleSheet("QLineEdit{\n"
-"     border-radius: 15px;\n"
-"\n"
-"    background-color: rgb(143, 214, 214);\n"
-"\n"
-"    color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-"\n"
-"    background-color: rgb(113, 169, 169);\n"
-"}")
-        self.lineEdit_5.setObjectName("lineEdit_5")
-        self.label_7 = QtWidgets.QLabel(self.centralwidget)
-        self.label_7.setGeometry(QtCore.QRect(610, 80, 181, 81))
-        self.label_7.setMinimumSize(QtCore.QSize(141, 61))
-        self.label_7.setText("")
-        self.label_7.setPixmap(QtGui.QPixmap("../Downloads/logo22.jpg"))
-        self.label_7.setScaledContents(True)
-        self.label_7.setObjectName("label_7")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(440, 570, 101, 51))
+        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_3.setGeometry(QtCore.QRect(530, 660, 101, 51))
         font = QtGui.QFont()
         font.setPointSize(14)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_2.setFont(font)
-        self.pushButton_2.setStyleSheet("QPushButton {\n"
+        self.pushButton_3.setFont(font)
+        self.pushButton_3.setStyleSheet("QPushButton{\n"
 "     border-radius: 15px;\n"
 "\n"
 "    background-color:rgb(255, 170, 0);\n"
 "\n"
 "    color:black;\n"
 "}")
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(580, 570, 101, 51))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_3.setFont(font)
-        self.pushButton_3.setStyleSheet("QPushButton {\n"
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.listWidget = QtWidgets.QListWidget(self.centralwidget)
+        self.listWidget.setGeometry(QtCore.QRect(380, 260, 331, 321))
+        self.listWidget.setStyleSheet("QListWidget{\n"
 "     border-radius: 15px;\n"
 "\n"
-"    background-color:rgb(143, 214, 214);\n"
+"    background-color: rgb(143, 214, 214);\n"
 "\n"
-"    color:black;\n"
+"    color: rgb(255, 255, 255);\n"
 "}")
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.lineEdit_6.raise_()
-        self.lineEdit.raise_()
-        self.lineEdit_2.raise_()
-        self.lineEdit_3.raise_()
-        self.label.raise_()
-        self.listView_2.raise_()
-        self.label_2.raise_()
-        self.lineEdit_4.raise_()
-        self.label_3.raise_()
-        self.label_5.raise_()
-        self.label_6.raise_()
-        self.lineEdit_7.raise_()
-        self.label_4.raise_()
-        self.lineEdit_5.raise_()
-        self.label_7.raise_()
-        self.pushButton_2.raise_()
-        self.pushButton_3.raise_()
+        self.listWidget.setObjectName("listWidget")
+        self.label_9 = QtWidgets.QLabel(self.centralwidget)
+        self.label_9.setGeometry(QtCore.QRect(440, 180, 221, 51))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_9.setFont(font)
+        self.label_9.setStyleSheet("QLabel{\n"
+"     border-radius: 15px;\n"
+"\n"
+"    background-color:rgb(26, 26,26);\n"
+"\n"
+"    color:white;\n"
+"}")
+        self.label_9.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_9.setObjectName("label_9")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 18))
@@ -258,16 +225,19 @@ class Ui_MainWindowshopkeepercontrol(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "score"))
-        self.label_2.setText(_translate("MainWindow", "items"))
-        self.label_3.setText(_translate("MainWindow", "income"))
-        self.label_5.setText(_translate("MainWindow", "profit"))
-        self.label_6.setText(_translate("MainWindow", "destination"))
-        self.label_4.setText(_translate("MainWindow", "rank"))
-        self.pushButton_2.setText(_translate("MainWindow", "shop"))
-        self.pushButton_2.clicked.connect(self.gotowin12)
-        self.pushButton_3.setText(_translate("MainWindow", "add"))
-        self.pushButton_3.clicked.connect(self.gotowin13)
+        self.pushButton.setText(_translate("MainWindow", "shop"))
+        self.pushButton.clicked.connect(self.gotowin12)
+        self.pushButton_2.setText(_translate("MainWindow", "add"))
+        self.pushButton_2.clicked.connect(self.gotowin13)
+        self.label_2.setText(_translate("MainWindow", "income"))
+        self.label_5.setText(_translate("MainWindow", "score"))
+        self.label_8.setText(_translate("MainWindow", "rank"))
+        self.label_3.setText(_translate("MainWindow", "profit"))
+        self.label_4.setText(_translate("MainWindow", "destination"))
+        self.pushButton_3.setText(_translate("MainWindow", "back"))
+        self.pushButton_3.clicked.connect(self.gotowin17)
+        self.label_9.setText(_translate("MainWindow", "items"))
+
     def gotowin12(self):                        #vasl  b shop
         self.mw10 = QtWidgets.QMainWindow()
         self.win12 = shop.Ui_MainWindowshop()
@@ -282,7 +252,13 @@ class Ui_MainWindowshopkeepercontrol(object):
         self.MainWindow.hide()
         self.mw11.show()    
 
-
+   
+    def gotowin17(self):                        #back b welcome
+        self.mw15 = QtWidgets.QMainWindow()
+        self.win17 = welcome.Ui_MainWindowwelcome()
+        self.win17.setupUi(self.mw15)
+        self.MainWindow.hide()
+        self.mw15.show()    
 
 if __name__ == "__main__":
     import sys
