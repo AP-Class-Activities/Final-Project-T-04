@@ -1,8 +1,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import signup
 import customer
-import shopkeeperclass
-import adminclass
+import shopkeeper
+import admin
 class Ui_MainWindowwelcome(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
