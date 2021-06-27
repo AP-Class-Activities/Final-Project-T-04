@@ -23,9 +23,9 @@ class DataBase:
         for dictionaries in lst:
             for j,i in dictionaries.items():
                 if key == i:
-                    return dictionaries,1
+                    return dictionaries
         else:
-            return "product not found!!!!",0
+            return "product not found!!!!"
     def search_value(self,value):
         lst = self.read_list()
         for dictionaries in lst:
@@ -38,5 +38,13 @@ class DataBase:
         key = self.search(value)
         temp = self.read_list()
         temp.remove(key)
+        file = open(self.name,"w")
+        json.dump(temp,file)
+    def comment(self,ID,new_comment):
+        dictionary = self.search(ID)
+        comment = dictionary["comments"].append(new_comment)
+        delete = self.delete(ID)
+        temp = self.read_list()
+        temp.append(dictionary)
         file = open(self.name,"w")
         json.dump(temp,file)

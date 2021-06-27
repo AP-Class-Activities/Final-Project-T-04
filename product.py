@@ -2,7 +2,7 @@ class product:
     def __init__(self,name,count,code,sellers_list,score,comments,discription):
         self.__name = name
         self.__count = count
-        self.__code = code    
+        self.__ID = ID    
         self.__sellers = sellers_list
         self.__score = score
         self.__comments = comments
@@ -25,12 +25,12 @@ class product:
         self.__count = count_list
 
     @property
-    def code(self): 
-        return 'PR'+self.__code
+    def ID(self): 
+        return 'PR'+self.__ID
     
-    @code.setter
-    def code(self,code_counter): 
-        self.__code = "PR"+ code_counter
+    @ID.setter
+    def ID(self,code_counter): 
+        self.__ID = "PR"+ code_counter
     
     @property
     def sellers(self): 
@@ -65,6 +65,6 @@ class product:
         self.__discription = value
     
     def dict(self):
-        A = {"name":self.name , "count":self.count , "code":self.code , "sellers":self.sellers , "score":self.score , "comments":self.comments , "discription":self.discription}
+        A = {"name":self.name , "count":self.count , "ID":self.ID , "sellers":self.sellers , "score":self.score , "comments":self.comments , "discription":self.discription}
         return A
 
