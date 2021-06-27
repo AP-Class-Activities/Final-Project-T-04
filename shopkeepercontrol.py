@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import shop
-
+import addproducts
 class Ui_MainWindowshopkeepercontrol(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -267,13 +267,20 @@ class Ui_MainWindowshopkeepercontrol(object):
         self.pushButton_2.setText(_translate("MainWindow", "shop"))
         self.pushButton_2.clicked.connect(self.gotowin12)
         self.pushButton_3.setText(_translate("MainWindow", "add"))
-
+        self.pushButton_3.clicked.connect(self.gotowin13)
     def gotowin12(self):                        #vasl  b shop
         self.mw10 = QtWidgets.QMainWindow()
         self.win12 = shop.Ui_MainWindowshop()
         self.win12.setupUi(self.mw10)
         self.MainWindow.hide()
         self.mw10.show()    
+
+    def gotowin13(self):                        #vasl  b addproducts
+        self.mw11 = QtWidgets.QMainWindow()
+        self.win13 = addproducts.Ui_MainWindowaddproducts()
+        self.win13.setupUi(self.mw11)
+        self.MainWindow.hide()
+        self.mw11.show()    
 
 
 
