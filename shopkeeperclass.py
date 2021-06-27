@@ -96,7 +96,7 @@ class Shopkeeper:
         return self.__email
 
     @email.setter
-    def wallet(self,value): 
+    def email(self,value): 
         self.__email = value
 
     @property

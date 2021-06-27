@@ -12,14 +12,12 @@ class DataBase:
         user = self.search_value(new["user"])
         email = self.search_value(new["email"])
         if ID == 1 or user == 1 or email == 1:
-            print("shopkeeper already added!")
-            return 0
+            return False
         else:
             temp.append(new)
             file = open(self.name,"w")
             json.dump(temp,file)
-            print("shopkeeper added!")
-            return 1
+            return True
     def search(self,key):
         lst = self.read_list()
         for dictionaries in lst:

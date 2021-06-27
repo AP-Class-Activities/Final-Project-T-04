@@ -4,6 +4,7 @@ import customerclass
 import shopkeeperclass
 import customer_db
 import shopkeeper_db
+import SignInError
 class Ui_MainWindowsignup(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -186,9 +187,20 @@ class Ui_MainWindowsignup(object):
         self.commandLinkButton_2.setText(_translate("MainWindow", "back"))
         self.commandLinkButton_2.clicked.connect(self.gotowin3)
         self.pushButton.setText(_translate("MainWindow", "Sign Up"))
+        self.pushButton.clicked.connect(self.choose)
         self.lineEdit_4.setPlaceholderText(_translate("MainWindow", "username"))
         self.comboBox.setItemText(0, _translate("MainWindow", "customer"))
         self.comboBox.setItemText(1, _translate("MainWindow", "shopkeeper"))
+        
+    def choose(self):
+            self.text = str(self.comboBox.currentText())
+            print("A")
+            if self.text =="shopkeeper":
+                    print("B")
+                    self.gotowin5()
+            elif self.text =="customer":
+                    print("C")
+                    self.gotowin6()
     def gotowin3(self):                             #back b welcome
         self.mw1 = QtWidgets.QMainWindow()
         self.win3 = welcome.Ui_MainWindowwelcome()
@@ -200,15 +212,17 @@ class Ui_MainWindowsignup(object):
         password = self.lineEdit_2.text()
         email = self.lineEdit_3.text()
         ID = shopkeeper_db.DataBase().counter()
-        dictionary = shopkeeperclass.Shopkeeper(user, password, [], [], 0, [], 0, [], email, 0, ID)
+        dictionary = shopkeeperclass.Shopkeeper(user, password, [], "", 0, [], 0, [], email, 0, ID)
         dictionary2 = dictionary.dict()
         ADD = shopkeeper_db.DataBase().add(dictionary2)
         if ADD:
-                #to do: open shopkeeper page
-                pass
+                #to do: Admin confirmation and open shopkeeper page
+                print("ADDED!!!!")
         else:
-                #to do: print in label
-                pass
+                self.mw1 = QtWidgets.QMainWindow()
+                self.win3 = SignInError.Ui_MainWindow()
+                self.win3.setupUi(self.mw1)
+                self.mw1.show() 
 
     def gotowin6(self):                              #customer sign in
         user = self.lineEdit_4.text()
@@ -222,8 +236,10 @@ class Ui_MainWindowsignup(object):
                 #to do: open customer page
                 pass
         else:
-                #to do: print in label
-                pass
+                self.mw1 = QtWidgets.QMainWindow()
+                self.win3 = SignInError.Ui_MainWindow()
+                self.win3.setupUi(self.mw1)
+                self.mw1.show()
 
 if __name__ == "__main__":
     import sys
