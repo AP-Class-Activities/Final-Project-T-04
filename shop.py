@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import welcome
 
 class Ui_MainWindowshop(object):
     def setupUi(self, MainWindow):
@@ -7,6 +7,7 @@ class Ui_MainWindowshop(object):
         MainWindow.resize(800, 800)
         MainWindow.setMaximumSize(QtCore.QSize(800, 800))
         MainWindow.setStyleSheet("background-color:rgb(0, 0, 0);")
+        self.MainWindow = MainWindow
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
@@ -118,7 +119,14 @@ class Ui_MainWindowshop(object):
         self.pushButton_2.setText(_translate("MainWindow", "Iranian Carpet"))
         self.pushButton_3.setText(_translate("MainWindow", "Kids Room Carpet"))
         self.pushButton_4.setText(_translate("MainWindow", "back"))
-
+        self.pushButton_4.clicked.connect(self.gotowin15)
+    
+    def gotowin15(self):                             #back b welcome
+        self.mw13 = QtWidgets.QMainWindow()
+        self.win15 = welcome.Ui_MainWindowwelcome()
+        self.win15.setupUi(self.mw13)
+        self.MainWindow.hide()
+        self.mw13.show()   
 
 if __name__ == "__main__":
     import sys
