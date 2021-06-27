@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import shopkeepercontrol
 
 class Ui_MainWindowaddproducts(object):
     def setupUi(self, MainWindow):
@@ -68,6 +68,19 @@ class Ui_MainWindowaddproducts(object):
 "}")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(460, 380, 91, 41))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.pushButton_2.setFont(font)
+        self.pushButton_2.setStyleSheet("QPushButton{\n"
+"     border-radius: 15px;\n"
+"\n"
+"    background-color:rgb(143, 214, 214);\n"
+"\n"
+"    color:black;\n"
+"}")
+        self.pushButton_2.setObjectName("pushButton_2")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 18))
@@ -85,7 +98,15 @@ class Ui_MainWindowaddproducts(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "send"))
         self.label.setText(_translate("MainWindow", "adding products"))
+        self.pushButton_2.setText(_translate("MainWindow", "back"))
+        self.pushButton_2.clicked.connect(self.gotowin16)
 
+    def gotowin16(self):                        #back b shopkeepercontrol
+        self.mw14 = QtWidgets.QMainWindow()
+        self.win16 = shopkeepercontrol.Ui_MainWindowshopkeepercontrol()
+        self.win16.setupUi(self.mw14)
+        self.MainWindow.hide()
+        self.mw14.show()    
 
 if __name__ == "__main__":
     import sys
@@ -95,3 +116,4 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
+ 
