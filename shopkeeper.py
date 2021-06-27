@@ -1,5 +1,7 @@
 class Shopkeeper:
-    def __init__(self, user, password, product, location, score, order, wallet, sell, credit, rate, profit, code, request):
+    def __init__(self, name, last_name, user, password, product, location, score, order, wallet, sell, email, profit, ID):
+        self.__name = name
+        self.__last = last_name
         self.__user = user
         self.__password = password
         self.__product = product
@@ -8,11 +10,26 @@ class Shopkeeper:
         self.__order = order
         self.__wallet = wallet
         self.__sell = sell
-        self.__credit = credit
-        self.__rate = rate
+        self.__email = email
         self.__profit = profit
-        self.__code = code
-        self.__request = request
+        self.__ID = ID
+
+    @property
+    def name(self): 
+        return self.__name
+    
+    @name.setter
+    def name(self,value): 
+        self.__name = value
+
+    @property
+    def last(self): 
+        return self.__last
+    
+    @last.setter
+    def last(self,value): 
+        self.__last = value
+
     @property
     def user(self): 
         return self.__user
@@ -75,22 +92,14 @@ class Shopkeeper:
     @sell.setter
     def sell(self,sell_list): 
         self.__sell = sell_list
-    
-
+ 
     @property
-    def credit(self): 
-        return self.__credit
+    def email(self): 
+        return self.__email
 
-    @credit.setter
-    def credit(self,credit_list): 
-        self.__credit = credit_list
-    @property
-    def rate(self): 
-        return self.__rate
-
-    @rate.setter
-    def wallet(self,rate_list): 
-        self.__rate = rate_list
+    @email.setter
+    def wallet(self,value): 
+        self.__email = value
 
     @property
     def profit(self): 
@@ -102,21 +111,13 @@ class Shopkeeper:
     
 
     @property
-    def code(self): 
-        return self.__code
+    def ID(self): 
+        return "SL"+ self.__ID
 
-    @code.setter
-    def code(self,code): 
-        self.__code = code
+    @ID.setter
+    def ID(self,code): 
+        self.__ID = "SL" + code
 
-    @property
-    def request(self): 
-        return "SL"+self.__request
-
-    @request.setter
-    def request(self,request): 
-        self.__request ="SL"+request
-
-    def __str__(self):
-        return 'user: {}   password: {}  product:{} location:{}  score:{} order:{}  wallet: {}   sell: {}   credit: {}   rate: {}    profit: {}    code:{}   request:{}'\
-            .format(self.user, self.password, self.product ,self.location  ,self.score, self.order, self.wallet, self.sell, self.credit, self.rate, self.profit, self.code, self.request)
+    def dict(self):
+        A = {"name":self.name ,"last name":self.last , "user":self.user , "password":self.password, "email":self.email,"wallet":self.wallet , "products":self.product , "location":self.location , "sold items":self.sell , "score":self.score , "ID":self.ID,"orders":self.orde,"profit":self.profit}
+        return A
