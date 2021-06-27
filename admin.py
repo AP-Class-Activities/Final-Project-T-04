@@ -133,7 +133,7 @@ class Ui_MainWindowadmin(object):
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "username"))
         self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "password"))
         self.pushButton.setText(_translate("MainWindow", "Login"))
-        self.label.setText(_translate("MainWindow", "shopkeeper"))
+        self.label.setText(_translate("MainWindow", "admin"))
         self.pushButton_2.setText(_translate("MainWindow", "back"))
         self.pushButton_2.clicked.connect(self.gotowin8)
     def gotowin8(self):                             #back b welcome
