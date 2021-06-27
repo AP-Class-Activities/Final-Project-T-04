@@ -1,7 +1,5 @@
 class Shopkeeper:
-    def __init__(self, name, last_name, user, password, product, location, score, order, wallet, sell, email, profit, ID):
-        self.__name = name
-        self.__last = last_name
+    def __init__(self, user, password, product, location, score, order, wallet, sell, email, profit, ID):
         self.__user = user
         self.__password = password
         self.__product = product
@@ -119,5 +117,5 @@ class Shopkeeper:
         self.__ID = "SL" + code
 
     def dict(self):
-        A = {"name":self.name ,"last name":self.last , "user":self.user , "password":self.password, "email":self.email,"wallet":self.wallet , "products":self.product , "location":self.location , "sold items":self.sell , "score":self.score , "ID":self.ID,"orders":self.orde,"profit":self.profit}
+        A = {"user":self.user , "password":self.password, "email":self.email,"wallet":self.wallet , "products":self.product , "location":self.location , "sold items":self.sell , "score":self.score , "ID":self.ID,"orders":self.orde,"profit":self.profit}
         return A
