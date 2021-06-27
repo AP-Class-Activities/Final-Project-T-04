@@ -12,14 +12,12 @@ class DataBase:
         user = self.search_value(new["user"])
         email = self.search_value(new["email"])
         if ID == 1 or user == 1 or email == 1:
-            print("User already added!")
-            return 0
+            return False
         else:
             temp.append(new)
             file = open(self.name,"w")
             json.dump(temp,file)
-            print("user added!")
-            return 1
+            return True
     def search(self,key):
         lst = self.read_list()
         for dictionaries in lst:
@@ -51,3 +49,10 @@ class DataBase:
                 return True
         else:
             return False
+    def counter(self):
+        lst = self.read_list()
+        count = 624311
+        for i in lst:
+            count += 1
+        st_counter = str(count)
+        return st_counter

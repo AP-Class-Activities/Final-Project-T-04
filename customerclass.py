@@ -95,7 +95,7 @@ class customer:
         return self.__email
 
     @email.setter
-    def ID(self, value):
+    def email(self, value):
         self.__email = value
         
     def dict(self):
