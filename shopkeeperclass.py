@@ -117,5 +117,5 @@ class Shopkeeper:
         self.__ID = "SL" + code
 
     def dict(self):
-        A = {"user":self.user , "password":self.password, "email":self.email,"wallet":self.wallet , "products":self.product , "location":self.location , "sold items":self.sell , "score":self.score , "ID":self.ID,"orders":self.orde,"profit":self.profit}
+        A = {"user":self.user , "password":self.password, "email":self.email,"wallet":self.wallet , "products":self.product , "location":self.location , "sold items":self.sell , "score":self.score , "ID":self.ID,"orders":self.order,"profit":self.profit}
         return A

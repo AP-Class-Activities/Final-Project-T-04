@@ -1,6 +1,9 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import welcome
-
+import customerclass
+import shopkeeperclass
+import customer_db
+import shopkeeper_db
 class Ui_MainWindowsignup(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -186,13 +189,41 @@ class Ui_MainWindowsignup(object):
         self.lineEdit_4.setPlaceholderText(_translate("MainWindow", "username"))
         self.comboBox.setItemText(0, _translate("MainWindow", "customer"))
         self.comboBox.setItemText(1, _translate("MainWindow", "shopkeeper"))
-        self.comboBox.setItemText(2, _translate("MainWindow", "admin"))
     def gotowin3(self):                             #back b welcome
         self.mw1 = QtWidgets.QMainWindow()
         self.win3 = welcome.Ui_MainWindowwelcome()
         self.win3.setupUi(self.mw1)
         self.MainWindow.hide()
         self.mw1.show()    
+    def gotowin5(self):                              #shopkeeper sign in
+        user = self.lineEdit_4.text()
+        password = self.lineEdit_2.text()
+        email = self.lineEdit_3.text()
+        ID = shopkeeper_db.DataBase().counter()
+        dictionary = shopkeeperclass.Shopkeeper(user, password, [], [], 0, [], 0, [], email, 0, ID)
+        dictionary2 = dictionary.dict()
+        ADD = shopkeeper_db.DataBase().add(dictionary2)
+        if ADD:
+                #to do: open shopkeeper page
+                pass
+        else:
+                #to do: print in label
+                pass
+
+    def gotowin6(self):                              #customer sign in
+        user = self.lineEdit_4.text()
+        password = self.lineEdit_2.text()
+        email = self.lineEdit_3.text()
+        ID = customer_db.DataBase().counter()
+        dictionary = customerclass.customer(user,password,email,0,[],[],[],0,ID)
+        dictionary2 = dictionary.dict()
+        ADD = customer_db.DataBase().add(dictionary2)
+        if ADD:
+                #to do: open customer page
+                pass
+        else:
+                #to do: print in label
+                pass
 
 if __name__ == "__main__":
     import sys
