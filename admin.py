@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import  welcome
-
+import adminvorod
 class Ui_MainWindowadmin(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -133,6 +133,7 @@ class Ui_MainWindowadmin(object):
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "username"))
         self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "password"))
         self.pushButton.setText(_translate("MainWindow", "Login"))
+        self.pushButton.clicked.connect(self.gotowin17)
         self.label.setText(_translate("MainWindow", "admin"))
         self.pushButton_2.setText(_translate("MainWindow", "back"))
         self.pushButton_2.clicked.connect(self.gotowin8)
@@ -143,12 +144,18 @@ class Ui_MainWindowadmin(object):
         self.MainWindow.hide()
         self.mw6.show()    
 
+    def gotowin17(self):                             #login b adminvorod
+        self.mw15 = QtWidgets.QMainWindow()
+        self.win17 = adminvorod.Ui_MainWindowadminvorod()
+        self.win17.setupUi(self.mw15)
+        self.MainWindow.hide()
+        self.mw15.show()    
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = Ui_MainWindowadmin()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
