@@ -1,6 +1,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import  welcome
 import shop
+from customer_db import DataBase
+import passworderror
 
 class Ui_MainWindowcustomer(object):
     def setupUi(self, MainWindow):
@@ -146,11 +148,20 @@ class Ui_MainWindowcustomer(object):
         self.mw3.show()    
 
     def gotowin14(self):                             #login b shop
-        self.mw12 = QtWidgets.QMainWindow()
-        self.win14 = shop.Ui_MainWindowshop()
-        self.win14.setupUi(self.mw12)
-        self.MainWindow.hide()
-        self.mw12.show()    
+        passw = self.lineEdit_2.text()
+        user = self.lineEdit.text()
+        check_pass = DataBase().check(user,passw)
+        if check_pass:
+            self.mw12 = QtWidgets.QMainWindow()
+            self.win14 = shop.Ui_MainWindowshop()
+            self.win14.setupUi(self.mw12)
+            self.MainWindow.hide()
+            self.mw12.show()    
+        else:
+            self.mw1 = QtWidgets.QMainWindow()
+            self.win3 = passworderror.Ui_MainWindow()
+            self.win3.setupUi(self.mw1)
+            self.mw1.show()
 
 
 if __name__ == "__main__":

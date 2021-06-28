@@ -194,12 +194,9 @@ class Ui_MainWindowsignup(object):
         
     def choose(self):
             self.text = str(self.comboBox.currentText())
-            print("A")
             if self.text =="shopkeeper":
-                    print("B")
                     self.gotowin5()
             elif self.text =="customer":
-                    print("C")
                     self.gotowin6()
     def gotowin3(self):                             #back b welcome
         self.mw1 = QtWidgets.QMainWindow()
