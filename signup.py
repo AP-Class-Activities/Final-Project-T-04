@@ -6,6 +6,8 @@ import customer_db
 import shopkeeper_db
 import SignInError
 import signupsuccessful
+import admin_db
+import signupSH
 class Ui_MainWindowsignup(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -212,15 +214,22 @@ class Ui_MainWindowsignup(object):
         ID = shopkeeper_db.DataBase().counter()
         dictionary = shopkeeperclass.Shopkeeper(user, password, [], "", 0, [], 0, [], email, 0, ID)
         dictionary2 = dictionary.dict()
-        ADD = shopkeeper_db.DataBase().add(dictionary2)
-        if ADD:
-                #to do: Admin confirmation and open shopkeeper page
-                print("ADDED!!!!")
-        else:
+        check = admin_db.acceptSH(dictionary2)
+        ADD = shopkeeper_db.DataBase.add(dictionary2)
+        if not ADD:
                 self.mw1 = QtWidgets.QMainWindow()
                 self.win3 = SignInError.Ui_MainWindow()
                 self.win3.setupUi(self.mw1)
                 self.mw1.show() 
+        self.mw1 = QtWidgets.QMainWindow()
+        self.win3 = welcome.Ui_MainWindowwelcome()
+        self.win3.setupUi(self.mw1)
+        self.MainWindow.hide()
+        self.mw1.show()
+        self.mw1 = QtWidgets.QMainWindow()
+        self.win3 = signupSH.Ui_MainWindow()
+        self.win3.setupUi(self.mw1)
+        self.mw1.show() 
 
     def gotowin6(self):                              #customer sign in
         user = self.lineEdit_4.text()

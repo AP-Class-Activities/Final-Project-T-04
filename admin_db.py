@@ -6,7 +6,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class DataBase:
     def __init__(self):
-        self.name = "C:\\DataBase\\admin.json"
+        self.name = "admin.json"
     def read_list(self):
         file = open(self.name,"r")
         return json.load(file)
