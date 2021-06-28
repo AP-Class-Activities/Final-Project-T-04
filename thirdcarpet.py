@@ -134,7 +134,7 @@ class Ui_MainWindow(object):
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(330, 200, 441, 511))
         self.label_4.setText("")
-        self.label_4.setPixmap(QtGui.QPixmap("IMG_2912.JPG"))
+        self.label_4.setPixmap(QtGui.QPixmap("IMG_2916.JPG"))
         self.label_4.setScaledContents(True)
         self.label_4.setObjectName("label_4")
         MainWindow.setCentralWidget(self.centralwidget)
