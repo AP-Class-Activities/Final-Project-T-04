@@ -91,12 +91,6 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.label_2.setObjectName("label_2")
-        self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
-        self.textEdit.setGeometry(QtCore.QRect(70, 310, 221, 121))
-        self.textEdit.setStyleSheet("color:rgb(255, 255, 255);\n"
-"\n"
-"")
-        self.textEdit.setObjectName("textEdit")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(70, 460, 221, 71))
         font = QtGui.QFont()
@@ -122,6 +116,8 @@ class Ui_MainWindow(object):
         self.label_5.setObjectName("label_5")
         self.plainTextEdit = QtWidgets.QPlainTextEdit(self.centralwidget)
         self.plainTextEdit.setGeometry(QtCore.QRect(70, 580, 221, 91))
+        self.plainTextEdit.setStyleSheet("color: rgb(255, 255, 255)")
+        self.plainTextEdit.setPlainText("")
         self.plainTextEdit.setObjectName("plainTextEdit")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         self.label_6.setGeometry(QtCore.QRect(240, 680, 71, 21))
@@ -155,6 +151,27 @@ class Ui_MainWindow(object):
 "    background-color: rgb(26, 179, 179)\n"
 "}")
         self.pushButton_9.setObjectName("pushButton_9")
+        self.label_17 = QtWidgets.QLabel(self.centralwidget)
+        self.label_17.setGeometry(QtCore.QRect(70, 310, 221, 121))
+        self.label_17.setStyleSheet("QLabel{\n"
+"    border: 2px solid rgb(38, 38, 48);\n"
+"    border-radius: 1px;\n"
+"    color: #FFF;\n"
+"\n"
+"    background-color: rgb(36, 36, 36);\n"
+"}\n"
+"\n"
+"QLabel:hover{\n"
+"    border: 2px solid rgb(48, 50, 62)\n"
+"}\n"
+"\n"
+"QLable:focus{\n"
+"    border: 2px solid rgb(35, 218, 233)\n"
+"\n"
+"    background-color: rgb(47, 47, 47)\n"
+"}")
+        self.label_17.setText("")
+        self.label_17.setObjectName("label_17")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 18))
@@ -173,11 +190,6 @@ class Ui_MainWindow(object):
         self.label_10.setText(_translate("MainWindow", "Iranian Carpet"))
         self.label_3.setText(_translate("MainWindow", "only"))
         self.label_2.setText(_translate("MainWindow", "T"))
-        self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.pushButton.setText(_translate("MainWindow", "Order now"))
         self.label_5.setText(_translate("MainWindow", "Comment"))
         self.label_6.setText(_translate("MainWindow", "Send"))
