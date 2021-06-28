@@ -61,7 +61,7 @@ class Ui_MainWindow(object):
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(410, 170, 151, 151))
         self.label_4.setText("")
-        self.label_4.setPixmap(QtGui.QPixmap("IMG_2929.JPG"))
+        self.label_4.setPixmap(QtGui.QPixmap("IMG_2929.jpg"))
         self.label_4.setScaledContents(True)
         self.label_4.setObjectName("label_4")
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
@@ -256,6 +256,14 @@ class Ui_MainWindow(object):
 "    background-color: rgb(26, 179, 179)\n"
 "}")
         self.pushButton_11.setObjectName("pushButton_11")
+        self.pushButton_12 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_12.setGeometry(QtCore.QRect(460, 80, 171, 71))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("IMG_2972.PNG"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_12.setIcon(icon)
+        self.pushButton_12.setIconSize(QtCore.QSize(40, 40))
+        self.pushButton_12.setCheckable(False)
+        self.pushButton_12.setObjectName("pushButton_12")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 18))
@@ -281,6 +289,7 @@ class Ui_MainWindow(object):
         self.pushButton_9.setText(_translate("MainWindow", "Details"))
         self.pushButton_10.setText(_translate("MainWindow", "Details"))
         self.pushButton_11.setText(_translate("MainWindow", "back"))
+        self.pushButton_12.setText(_translate("MainWindow", "PushButton"))
 
 
 if __name__ == "__main__":
