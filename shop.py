@@ -21,7 +21,7 @@ class Ui_MainWindowshop(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(70, 80, 671, 301))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("../Pictures/Saved Pictures/logo22.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("logo22.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
