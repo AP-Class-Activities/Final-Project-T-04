@@ -25,7 +25,7 @@ class Ui_MainWindowadminvorod(object):
         self.label_7.setGeometry(QtCore.QRect(610, 80, 181, 81))
         self.label_7.setMinimumSize(QtCore.QSize(141, 61))
         self.label_7.setText("")
-        self.label_7.setPixmap(QtGui.QPixmap("../Downloads/logo22.jpg"))
+        self.label_7.setPixmap(QtGui.QPixmap("logo22.jpg"))
         self.label_7.setScaledContents(True)
         self.label_7.setObjectName("label_7")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
@@ -129,7 +129,7 @@ class Ui_MainWindowadminvorod(object):
         self.win21 = welcome.Ui_MainWindowwelcome()
         self.win21.setupUi(self.mw19)
         self.MainWindow.hide()
-        self.mw19.show()             
+        self.mw19.show()         
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

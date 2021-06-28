@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import adminvorod
 
 class Ui_MainWindowadminadd(object):
     def setupUi(self, MainWindow):
@@ -127,6 +127,14 @@ class Ui_MainWindowadminadd(object):
         self.pushButton_2.setText(_translate("MainWindow", "NO"))
         self.pushButton_3.setText(_translate("MainWindow", "ADD"))
         self.pushButton_4.setText(_translate("MainWindow", "back"))
+        self.pushButton_4.clicked.connect(self.gotowin24)
+
+    def gotowin24(self):                             #back b adminvorod
+        self.mw22 = QtWidgets.QMainWindow()
+        self.win24 = adminvorod.Ui_MainWindowadminvorod()
+        self.win24.setupUi(self.mw22)
+        self.MainWindow.hide()
+        self.mw22.show()             
 
 
 if __name__ == "__main__":
