@@ -54,7 +54,7 @@ class Ui_MainWindow(object):
 "")
         self.lineEdit_3.setObjectName("lineEdit_3")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(70, 100, 391, 71))
+        self.label.setGeometry(QtCore.QRect(70, 100, 381, 71))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label.setFont(font)
@@ -81,7 +81,7 @@ class Ui_MainWindow(object):
 "}")
         self.pushButton_2.setObjectName("pushButton_2")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(320, 380, 91, 41))
+        self.pushButton_3.setGeometry(QtCore.QRect(330, 380, 91, 41))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.pushButton_3.setFont(font)
@@ -93,6 +93,19 @@ class Ui_MainWindow(object):
 "    color:black;\n"
 "}")
         self.pushButton_3.setObjectName("pushButton_3")
+        self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_4.setGeometry(QtCore.QRect(200, 380, 91, 41))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.pushButton_4.setFont(font)
+        self.pushButton_4.setStyleSheet("QPushButton{\n"
+"     border-radius: 15px;\n"
+"\n"
+"    background-color:rgb(143, 214, 214);\n"
+"\n"
+"    color:black;\n"
+"}")
+        self.pushButton_4.setObjectName("pushButton_4")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 18))
@@ -108,10 +121,11 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton.setText(_translate("MainWindow", "NO"))
+        self.pushButton.setText(_translate("MainWindow", "YES"))
         self.label.setText(_translate("MainWindow", "add/remove products"))
-        self.pushButton_2.setText(_translate("MainWindow", "YES"))
+        self.pushButton_2.setText(_translate("MainWindow", "NO"))
         self.pushButton_3.setText(_translate("MainWindow", "ADD"))
+        self.pushButton_4.setText(_translate("MainWindow", "back"))
 
 
 if __name__ == "__main__":
