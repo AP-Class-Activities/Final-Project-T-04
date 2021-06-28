@@ -1,5 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import adminvorod
+from admin_db import acceptSH
+import Qdialog
 
 class Ui_MainWindowadminaddshopkeeper(object):
     def setupUi(self, MainWindow):
@@ -121,13 +123,23 @@ class Ui_MainWindowadminaddshopkeeper(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "ADD or Remove shopkeeper"))
         self.pushButton.setText(_translate("MainWindow", "YES"))
         self.label.setText(_translate("MainWindow", "add/remove shopkeeper"))
         self.pushButton_2.setText(_translate("MainWindow", "NO"))
         self.pushButton_3.setText(_translate("MainWindow", "ADD"))
         self.pushButton_4.setText(_translate("MainWindow", "back"))
         self.pushButton_4.clicked.connect(self.gotowin22)
+        self.lineEdit_3.setText(_translate("MainWindow", acceptSH().show2()))
+        self.pushButton.clicked.connect(self.accept)
+
+    def accept(self):
+        A = acceptSH().accept()
+        self.mw1 = QtWidgets.QMainWindow()
+        self.win3 = Qdialog.Ui_MainWindow()
+        self.win3.setupUi(self.mw1)
+        self.mw1.show()
+
 
     def gotowin22(self):                             #back b adminvorod
         self.mw20 = QtWidgets.QMainWindow()

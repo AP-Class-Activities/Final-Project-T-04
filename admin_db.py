@@ -2,7 +2,6 @@ import json
 import shopkeeper_db
 import Qdialog
 import product_db
-from PyQt5 import QtCore, QtGui, QtWidgets
 
 class DataBase:
     def __init__(self):
@@ -54,40 +53,40 @@ class DataBase:
         else:
             return False
 class acceptSH:
-    def __ini__(self,new):
-        self.name = "accept_shopkeepers.json"
-        self.new = new
+    def __ini__(self,name="C:\\DataBase\\accept_shopkeepers.json"):
+        self.name = name
     def read_list(self):
-        file = open(self.name,"r")
+        file = open("C:\\DataBase\\accept_shopkeepers.json","r")
         return json.load(file)
-    def request(self):
+    def request(self,new):
         temp = self.read_list()
-        temp.append(self.new)
-        file = open(self.name,"w")
+        temp.append(new)
+        file = open("C:\\DataBase\\accept_shopkeepers.json","w")
         json.dump(temp,file)
     def show1(self):
         temp = self.read_list()
         self.A = temp[0]
         return self.A
-    def accept(self):
-        shopkeeper_db.DataBase().add(self.A)
+    def show2(self):
         temp = self.read_list()
-        temp.remove(0)
-        self.mw1 = QtWidgets.QMainWindow()
-        self.win3 = Qdialog.Ui_MainWindow()
-        self.win3.setupUi(self.mw1)
-        self.mw1.show()
+        self.A = str(temp[0])
+        return self.A
+    def accept(self):
+        shopkeeper_db.DataBase().add(self.show1())
+        temp = self.read_list()
+        del temp[0]
+        file = open("C:\\DataBase\\accept_shopkeepers.json","w")
+        json.dump(temp,file)
     def reject(self):
         temp = self.read_list()
         temp.remove(0)
-        self.mw1 = QtWidgets.QMainWindow()
-        self.win3 = Qdialog.Ui_MainWindow()
-        self.win3.setupUi(self.mw1)
-        self.mw1.show()
+        del temp[0]
+        file = open("C:\\DataBase\\accept_shopkeepers.json","w")
+        json.dump(temp,file)
 
 class acceptPR:
     def __ini__(self,new):
-        self.name = "accept_products.json"
+        self.name = "C:\\DataBase\\accept_products.json"
         self.new = new
     def read_list(self):
         file = open(self.name,"r")
