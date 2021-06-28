@@ -123,7 +123,7 @@ class Ui_MainWindowadminadd(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "YES"))
-        self.label.setText(_translate("MainWindow", "add/remove customer"))
+        self.label.setText(_translate("MainWindow", "Enter Customers user or email or ID \n to remove!"))
         self.pushButton_2.setText(_translate("MainWindow", "NO"))
         self.pushButton_3.setText(_translate("MainWindow", "ADD"))
         self.pushButton_4.setText(_translate("MainWindow", "back"))

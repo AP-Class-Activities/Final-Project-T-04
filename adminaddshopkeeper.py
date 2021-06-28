@@ -130,16 +130,29 @@ class Ui_MainWindowadminaddshopkeeper(object):
         self.pushButton_3.setText(_translate("MainWindow", "ADD"))
         self.pushButton_4.setText(_translate("MainWindow", "back"))
         self.pushButton_4.clicked.connect(self.gotowin22)
-        self.lineEdit_3.setText(_translate("MainWindow", acceptSH().show2()))
+        self.lineEdit_3.setText(_translate("MainWindow", self.box()))
         self.pushButton.clicked.connect(self.accept)
+        self.pushButton_2.clicked.connect(self.reject)
 
-    def accept(self):
+    def box(self):
+        try:
+                return(acceptSH().show2())
+        except:
+                return "There are no new requests!!!"
+                
+    def accept(self):     #accept new shopkeeper
         A = acceptSH().accept()
         self.mw1 = QtWidgets.QMainWindow()
         self.win3 = Qdialog.Ui_MainWindow()
         self.win3.setupUi(self.mw1)
         self.mw1.show()
 
+    def reject(self):     #reject new shopkeeper
+        A = acceptSH().reject()
+        self.mw1 = QtWidgets.QMainWindow()
+        self.win3 = Qdialog.Ui_MainWindow()
+        self.win3.setupUi(self.mw1)
+        self.mw1.show()
 
     def gotowin22(self):                             #back b adminvorod
         self.mw20 = QtWidgets.QMainWindow()

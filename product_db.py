@@ -10,14 +10,12 @@ class DataBase:
         temp = self.read_list()
         ID = self.search_value(new["ID"])
         if ID == 1:
-            print("product already added!")
-            return 0
+            return False
         else:
             temp.append(new)
             file = open(self.name,"w")
             json.dump(temp,file)
-            print("product added!")
-            return 1
+            return True
     def search(self,key):
         lst = self.read_list()
         for dictionaries in lst:
