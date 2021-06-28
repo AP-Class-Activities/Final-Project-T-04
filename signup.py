@@ -5,6 +5,7 @@ import shopkeeperclass
 import customer_db
 import shopkeeper_db
 import SignInError
+import signupsuccessful
 class Ui_MainWindowsignup(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -230,8 +231,16 @@ class Ui_MainWindowsignup(object):
         dictionary2 = dictionary.dict()
         ADD = customer_db.DataBase().add(dictionary2)
         if ADD:
-                #to do: open customer page
-                pass
+                self.mw3 = QtWidgets.QMainWindow()
+                self.win5 = welcome.Ui_MainWindowwelcome()
+                self.win5.setupUi(self.mw3)
+                self.MainWindow.hide()
+                self.mw3.show() 
+                self.mw1 = QtWidgets.QMainWindow()
+                self.win3 = signupsuccessful.Ui_MainWindow()
+                self.win3.setupUi(self.mw1)
+                self.mw1.show()
+                
         else:
                 self.mw1 = QtWidgets.QMainWindow()
                 self.win3 = SignInError.Ui_MainWindow()
