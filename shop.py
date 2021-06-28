@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import welcome
-
+import carpet
 class Ui_MainWindowshop(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -117,6 +117,7 @@ class Ui_MainWindowshop(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "rug"))
         self.pushButton_2.setText(_translate("MainWindow", "Iranian Carpet"))
+        self.pushButton_2.clicked.connect(self.gotowin23)
         self.pushButton_3.setText(_translate("MainWindow", "Kids Room Carpet"))
         self.pushButton_4.setText(_translate("MainWindow", "back"))
         self.pushButton_4.clicked.connect(self.gotowin15)
@@ -128,6 +129,13 @@ class Ui_MainWindowshop(object):
         self.MainWindow.hide()
         self.mw13.show()   
 
+
+    def gotowin23(self):                             #vasl b iraniancarpet
+        self.mw21 = QtWidgets.QMainWindow()
+        self.win23 = carpet.Ui_MainWindowcarpet()
+        self.win23.setupUi(self.mw21)
+        self.MainWindow.hide()
+        self.mw21.show()   
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
