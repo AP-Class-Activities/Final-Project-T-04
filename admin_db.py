@@ -1,6 +1,5 @@
 import json
 import shopkeeper_db
-import Qdialog
 import product_db
 
 class DataBase:
