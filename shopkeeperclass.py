@@ -110,11 +110,19 @@ class Shopkeeper:
 
     @property
     def ID(self): 
-        return "SL"+ self.__ID
+        return "SL"+self.__ID
 
     @ID.setter
     def ID(self,code): 
-        self.__ID = "SL" + code
+        self.__ID = "SL"+code
+    
+    @property
+    def status(self): 
+        return self.__status
+    
+    @status.setter
+    def status(self,value): 
+        self.__status = value
 
     def dict(self):
         A = {"user":self.user , "password":self.password, "email":self.email,"wallet":self.wallet , "products":self.product , "location":self.location , "sold items":self.sell , "score":self.score , "ID":self.ID,"orders":self.order,"profit":self.profit}

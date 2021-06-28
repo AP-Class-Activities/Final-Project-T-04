@@ -1,4 +1,8 @@
 import json
+import shopkeeper_db
+import Qdialog
+import product_db
+from PyQt5 import QtCore, QtGui, QtWidgets
 
 class DataBase:
     def __init__(self):
@@ -12,22 +16,20 @@ class DataBase:
         user = self.search_value(new["user"])
         email = self.search_value(new["email"])
         if ID == 1 or user == 1 or email == 1:
-            print("admin already added!")
-            return 0
+            return False
         else:
             temp.append(new)
             file = open(self.name,"w")
             json.dump(temp,file)
-            print("admin added!")
-            return 1
+            return True
     def search(self,key):
         lst = self.read_list()
         for dictionaries in lst:
             for j,i in dictionaries.items():
                 if key == i:
-                    return dictionaries,1
+                    return dictionaries
         else:
-            return "admin not found!!!!",0
+            return "admin not found!!!!"
     def search_value(self,value):
         lst = self.read_list()
         for dictionaries in lst:
@@ -51,3 +53,66 @@ class DataBase:
                 return True
         else:
             return False
+class acceptSH:
+    def __ini__(self,new):
+        self.name = "accept_shopkeepers.json"
+        self.new = new
+    def read_list(self):
+        file = open(self.name,"r")
+        return json.load(file)
+    def request(self):
+        temp = self.read_list()
+        temp.append(self.new)
+        file = open(self.name,"w")
+        json.dump(temp,file)
+    def show1(self):
+        temp = self.read_list()
+        self.A = temp[0]
+        return self.A
+    def accept(self):
+        shopkeeper_db.DataBase().add(self.A)
+        temp = self.read_list()
+        temp.remove(0)
+        self.mw1 = QtWidgets.QMainWindow()
+        self.win3 = Qdialog.Ui_MainWindow()
+        self.win3.setupUi(self.mw1)
+        self.mw1.show()
+    def reject(self):
+        temp = self.read_list()
+        temp.remove(0)
+        self.mw1 = QtWidgets.QMainWindow()
+        self.win3 = Qdialog.Ui_MainWindow()
+        self.win3.setupUi(self.mw1)
+        self.mw1.show()
+
+class acceptPR:
+    def __ini__(self,new):
+        self.name = "accept_products.json"
+        self.new = new
+    def read_list(self):
+        file = open(self.name,"r")
+        return json.load(file)
+    def request(self):
+        temp = self.read_list()
+        temp.append(self.new)
+        file = open(self.name,"w")
+        json.dump(temp,file)
+    def show1(self):
+        temp = self.read_list()
+        self.A = temp[0]
+        return self.A
+    def accept(self):
+        product_db.DataBase().add(self.A)
+        temp = self.read_list()
+        temp.remove(0)
+        self.mw1 = QtWidgets.QMainWindow()
+        self.win3 = Qdialog.Ui_MainWindow()
+        self.win3.setupUi(self.mw1)
+        self.mw1.show()
+    def reject(self):
+        temp = self.read_list()
+        temp.remove(0)
+        self.mw1 = QtWidgets.QMainWindow()
+        self.win3 = Qdialog.Ui_MainWindow()
+        self.win3.setupUi(self.mw1)
+        self.mw1.show()
