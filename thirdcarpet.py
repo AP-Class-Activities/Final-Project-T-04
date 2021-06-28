@@ -1,13 +1,12 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindowthirdcarpet(object):
+class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 800)
         MainWindow.setMaximumSize(QtCore.QSize(800, 800))
         MainWindow.setStyleSheet("background-color:rgb(0, 0, 0);")
-        self.MainWindow = MainWindow
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
@@ -54,8 +53,47 @@ class Ui_MainWindowthirdcarpet(object):
         self.pushButton_13.setIconSize(QtCore.QSize(40, 40))
         self.pushButton_13.setCheckable(False)
         self.pushButton_13.setObjectName("pushButton_13")
+        self.label_17 = QtWidgets.QLabel(self.centralwidget)
+        self.label_17.setGeometry(QtCore.QRect(70, 310, 221, 121))
+        self.label_17.setStyleSheet("QLabel{\n"
+                                    "    border: 2px solid rgb(38, 38, 48);\n"
+                                    "    border-radius: 1px;\n"
+                                    "    color: #FFF;\n"
+                                    "\n"
+                                    "    background-color: rgb(36, 36, 36);\n"
+                                    "}\n"
+                                    "\n"
+                                    "QLabel:hover{\n"
+                                    "    border: 2px solid rgb(48, 50, 62)\n"
+                                    "}\n"
+                                    "\n"
+                                    "QLable:focus{\n"
+                                    "    border: 2px solid rgb(35, 218, 233)\n"
+                                    "\n"
+                                    "    background-color: rgb(47, 47, 47)\n"
+                                    "}")
+        self.label_17.setText("")
+        self.label_17.setObjectName("label_17")
+        self.pushButton_9 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_9.setGeometry(QtCore.QRect(70, 720, 221, 41))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.pushButton_9.setFont(font)
+        self.pushButton_9.setStyleSheet("QPushButton{\n"
+                                        "    border-radius: 15px;\n"
+                                        "\n"
+                                        "    background-color: rgb(255, 170, 0);\n"
+                                        "\n"
+                                        "    color: rgb(255, 225, 225);\n"
+                                        "}\n"
+                                        "\n"
+                                        "QPushButton:hover{\n"
+                                        "\n"
+                                        "    background-color: rgb(26, 179, 179)\n"
+                                        "}")
+        self.pushButton_9.setObjectName("pushButton_9")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(40, 200, 61, 31))
+        self.label_3.setGeometry(QtCore.QRect(40, 190, 71, 41))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(14)
@@ -82,14 +120,8 @@ class Ui_MainWindowthirdcarpet(object):
 "\n"
 "")
         self.label_2.setObjectName("label_2")
-        self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
-        self.textEdit.setGeometry(QtCore.QRect(70, 310, 221, 121))
-        self.textEdit.setStyleSheet("color:rgb(255, 255, 255);\n"
-"\n"
-"")
-        self.textEdit.setObjectName("textEdit")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(80, 460, 211, 71))
+        self.pushButton.setGeometry(QtCore.QRect(70, 460, 221, 71))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.pushButton.setFont(font)
@@ -105,14 +137,15 @@ class Ui_MainWindowthirdcarpet(object):
 "")
         self.pushButton.setObjectName("pushButton")
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(80, 550, 71, 21))
+        self.label_5.setGeometry(QtCore.QRect(70, 550, 81, 21))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.label_5.setFont(font)
         self.label_5.setStyleSheet("color: rgb(225, 225, 225)")
         self.label_5.setObjectName("label_5")
         self.plainTextEdit = QtWidgets.QPlainTextEdit(self.centralwidget)
-        self.plainTextEdit.setGeometry(QtCore.QRect(80, 580, 211, 91))
+        self.plainTextEdit.setGeometry(QtCore.QRect(70, 580, 221, 91))
+        self.plainTextEdit.setStyleSheet("color: rgb(255, 255, 255)")
         self.plainTextEdit.setObjectName("plainTextEdit")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         self.label_6.setGeometry(QtCore.QRect(240, 680, 71, 21))
@@ -146,21 +179,17 @@ class Ui_MainWindowthirdcarpet(object):
         self.label_10.setText(_translate("MainWindow", "Iranian Carpet"))
         self.label_3.setText(_translate("MainWindow", "only"))
         self.label_2.setText(_translate("MainWindow", "T"))
-        self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.pushButton.setText(_translate("MainWindow", "Order now"))
         self.label_5.setText(_translate("MainWindow", "Comment"))
         self.label_6.setText(_translate("MainWindow", "Send"))
+        self.pushButton_9.setText(_translate("MainWindow", "back"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindowthirdcarpet()
+    ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
