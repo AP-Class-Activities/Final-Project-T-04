@@ -6,7 +6,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class DataBase:
     def __init__(self):
-        self.name = "admin.json"
+        self.name = "C:\\DataBase\\admin.json"
     def read_list(self):
         file = open(self.name,"r")
         return json.load(file)
@@ -55,7 +55,7 @@ class DataBase:
             return False
 class acceptSH:
     def __ini__(self,new):
-        self.name = "accept_shopkeepers.json"
+        self.name = "C:\\DataBase\\accept_shopkeepers.json"
         self.new = new
     def read_list(self):
         file = open(self.name,"r")
@@ -87,7 +87,7 @@ class acceptSH:
 
 class acceptPR:
     def __ini__(self,new):
-        self.name = "accept_products.json"
+        self.name = "C:\\DataBase\\accept_products.json"
         self.new = new
     def read_list(self):
         file = open(self.name,"r")
