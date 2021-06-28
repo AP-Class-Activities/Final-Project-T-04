@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import shop
 
 class Ui_MainWindowcarpet(object):
     def setupUi(self, MainWindow):
@@ -277,9 +277,16 @@ class Ui_MainWindowcarpet(object):
         self.pushButton_7.setText(_translate("MainWindow", "Details"))
         self.pushButton_8.setText(_translate("MainWindow", "Details"))
         self.pushButton_9.setText(_translate("MainWindow", "back"))
+        self.pushButton_9.clicked.connect(self.gotowin28)
         self.label_10.setText(_translate("MainWindow", "Iranian Carpet"))
         self.pushButton_10.setText(_translate("MainWindow", "PushButton"))
 
+    def gotowin28(self):                             #vasl b shop
+        self.mw26 = QtWidgets.QMainWindow()
+        self.win28 = shop.Ui_MainWindowshop()
+        self.win28.setupUi(self.mw26)
+        self.MainWindow.hide()
+        self.mw26.show()            
 
 if __name__ == "__main__":
     import sys

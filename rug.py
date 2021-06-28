@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import shop
 
 class Ui_MainWindowrug(object):
     def setupUi(self, MainWindow):
@@ -287,9 +287,15 @@ class Ui_MainWindowrug(object):
         self.pushButton_7.setText(_translate("MainWindow", "Details"))
         self.pushButton_8.setText(_translate("MainWindow", "Details"))
         self.pushButton_9.setText(_translate("MainWindow", "back"))
+        self.pushButton_9.clicked.connect(self.gotowin27)
         self.pushButton_12.setText(_translate("MainWindow", "PushButton"))
 
-
+    def gotowin27(self):                             #vasl b shop
+        self.mw25 = QtWidgets.QMainWindow()
+        self.win27 = shop.Ui_MainWindowshop()
+        self.win27.setupUi(self.mw25)
+        self.MainWindow.hide()
+        self.mw25.show()            
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
