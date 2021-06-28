@@ -1,5 +1,13 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import shop
+import firstkid
+import secondkid
+import thirdkid
+import fourthkid
+import fifthkid
+import sixthkid
+import seventhkid
+import eighthkid
 
 class Ui_MainWindowkids(object):
     def setupUi(self, MainWindow):
@@ -272,13 +280,21 @@ class Ui_MainWindowkids(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_10.setText(_translate("MainWindow", "Kids Room Carpet"))
         self.pushButton_3.setText(_translate("MainWindow", "Details"))
+        self.pushButton_3.clicked.connect(self.gotowin47)
         self.pushButton_4.setText(_translate("MainWindow", "Details"))
+        self.pushButton_4.clicked.connect(self.gotowin46)
         self.pushButton_5.setText(_translate("MainWindow", "Details"))
+        self.pushButton_5.clicked.connect(self.gotowin45)
         self.pushButton_6.setText(_translate("MainWindow", "Details"))
+        self.pushButton_6.clicked.connect(self.gotowin44)
         self.pushButton_7.setText(_translate("MainWindow", "Details"))
+        self.pushButton_7.clicked.connect(self.gotowin43)
         self.pushButton_8.setText(_translate("MainWindow", "Details"))
+        self.pushButton_8.clicked.connect(self.gotowin42)
         self.pushButton_9.setText(_translate("MainWindow", "Details"))
+        self.pushButton_9.clicked.connect(self.gotowin41)
         self.pushButton_10.setText(_translate("MainWindow", "Details"))
+        self.pushButton_10.clicked.connect(self.gotowin40)
         self.pushButton_11.setText(_translate("MainWindow", "back"))
         self.pushButton_11.clicked.connect(self.gotowin26)
         self.pushButton_12.setText(_translate("MainWindow", "PushButton"))
@@ -289,6 +305,64 @@ class Ui_MainWindowkids(object):
         self.win26.setupUi(self.mw24)
         self.MainWindow.hide()
         self.mw24.show()            
+
+    def gotowin40(self):                             #vasl b 1
+        self.mw38 = QtWidgets.QMainWindow()
+        self.win40 = firstkid.Ui_MainWindowfirstkid()
+        self.win40.setupUi(self.mw38)
+        self.MainWindow.hide()
+        self.mw38.show()                       
+
+    def gotowin41(self):                             #vasl b 2
+        self.mw39 = QtWidgets.QMainWindow()
+        self.win41 = secondkid.Ui_MainWindowsecondkid()
+        self.win41.setupUi(self.mw39)
+        self.MainWindow.hide()
+        self.mw39.show()            
+
+
+    def gotowin42(self):                             #vasl b 3
+        self.mw40 = QtWidgets.QMainWindow()
+        self.win42 = thirdkid.Ui_MainWindowthirdkid()
+        self.win42.setupUi(self.mw40)
+        self.MainWindow.hide()
+        self.mw40.show()            
+
+
+    def gotowin43(self):                             #vasl b 4
+        self.mw41 = QtWidgets.QMainWindow()
+        self.win43 = fourthkid.Ui_MainWindowfourthkid()
+        self.win43.setupUi(self.mw41)
+        self.MainWindow.hide()
+        self.mw41.show()            
+
+    def gotowin44(self):                             #vasl b 5
+        self.mw42 = QtWidgets.QMainWindow()
+        self.win44 = fifthkid.Ui_MainWindowfifthkid()
+        self.win44.setupUi(self.mw42)
+        self.MainWindow.hide()
+        self.mw42.show()            
+
+    def gotowin45(self):                             #vasl b 6
+        self.mw43 = QtWidgets.QMainWindow()
+        self.win45 = sixthkid.Ui_MainWindowsixthkid()
+        self.win45.setupUi(self.mw43)
+        self.MainWindow.hide()
+        self.mw43.show()            
+
+    def gotowin46(self):                             #vasl b 7
+        self.mw44 = QtWidgets.QMainWindow()
+        self.win46 = seventhkid.Ui_MainWindowsevenkid()
+        self.win46.setupUi(self.mw44)
+        self.MainWindow.hide()
+        self.mw44.show()            
+        
+    def gotowin47(self):                             #vasl b 8
+        self.mw45 = QtWidgets.QMainWindow()
+        self.win47 = eighthkid.Ui_MainWindoweighthkid()
+        self.win47.setupUi(self.mw45)
+        self.MainWindow.hide()
+        self.mw45.show()                            
 
 if __name__ == "__main__":
     import sys
