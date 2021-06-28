@@ -1,13 +1,16 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
-
-class Ui_MainWindow(object):
+import adminadd
+import adminaddproducts
+import adminaddshopkeeper
+import welcome
+class Ui_MainWindowadminvorod(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
         MainWindow.setMinimumSize(QtCore.QSize(800, 600))
         MainWindow.setMaximumSize(QtCore.QSize(800, 800))
         MainWindow.setStyleSheet("background-color:rgb(0, 0, 0)")
+        self.MainWindow = MainWindow
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
@@ -93,16 +96,45 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "shopkeeper"))
+        self.pushButton.clicked.connect(self.gotowin18)
         self.pushButton_2.setText(_translate("MainWindow", "products"))
+        self.pushButton_2.clicked.connect(self.gotowin19)
         self.pushButton_3.setText(_translate("MainWindow", "customers"))
+        self.pushButton_3.clicked.connect(self.gotowin20)
         self.pushButton_4.setText(_translate("MainWindow", "back"))
+        self.pushButton_4.clicked.connect(self.gotowin21)
+    def gotowin18(self):                             #shopkeeper b adminaddshopkeeper
+        self.mw16 = QtWidgets.QMainWindow()
+        self.win18 = adminaddshopkeeper.Ui_MainWindowadminaddshopkeeper()
+        self.win18.setupUi(self.mw16)
+        self.MainWindow.hide()
+        self.mw16.show()    
 
+    def gotowin19(self):                             #products b adminaddproducts
+        self.mw17 = QtWidgets.QMainWindow()
+        self.win19 = adminaddproducts.Ui_MainWindowadminaddproducts()
+        self.win19.setupUi(self.mw17)
+        self.MainWindow.hide()
+        self.mw17.show()    
+        
+    def gotowin20(self):                             #custoer b adminadd
+        self.mw18 = QtWidgets.QMainWindow()
+        self.win20 = adminadd.Ui_MainWindowadminadd()
+        self.win20.setupUi(self.mw18)
+        self.MainWindow.hide()
+        self.mw18.show()         
 
+    def gotowin21(self):                             #back b welcome
+        self.mw19 = QtWidgets.QMainWindow()
+        self.win21 = welcome.Ui_MainWindowwelcome()
+        self.win21.setupUi(self.mw19)
+        self.MainWindow.hide()
+        self.mw19.show()             
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = Ui_MainWindowadminvorod()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
