@@ -1,6 +1,13 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import shop
-
+import thirdcarpet
+import fourthcarpet
+import sixthcarpet
+import secondcarpet
+import seventhcarpet
+import eighthcarpet
+import firstcarpet
+import fifthcarpet
 class Ui_MainWindowcarpet(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -269,13 +276,21 @@ class Ui_MainWindowcarpet(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "Details"))
+        self.pushButton.clicked.connect(self.gotowin37)
         self.pushButton_2.setText(_translate("MainWindow", "Details"))
+        self.pushButton_2.clicked.connect(self.gotowin36)
         self.pushButton_3.setText(_translate("MainWindow", "Details"))
+        self.pushButton_3.clicked.connect(self.gotowin30)
         self.pushButton_4.setText(_translate("MainWindow", "Details"))
+        self.pushButton_4.clicked.connect(self.gotowin31)
         self.pushButton_5.setText(_translate("MainWindow", "Details"))
+        self.pushButton_5.clicked.connect(self.gotowin32)
         self.pushButton_6.setText(_translate("MainWindow", "Details"))
+        self.pushButton_6.clicked.connect(self.gotowin33)
         self.pushButton_7.setText(_translate("MainWindow", "Details"))
+        self.pushButton_7.clicked.connect(self.gotowin34)
         self.pushButton_8.setText(_translate("MainWindow", "Details"))
+        self.pushButton_8.clicked.connect(self.gotowin35)
         self.pushButton_9.setText(_translate("MainWindow", "back"))
         self.pushButton_9.clicked.connect(self.gotowin28)
         self.label_10.setText(_translate("MainWindow", "Iranian Carpet"))
@@ -288,6 +303,63 @@ class Ui_MainWindowcarpet(object):
         self.MainWindow.hide()
         self.mw26.show()            
 
+    def gotowin30(self):                             #vasl b third
+        self.mw28 = QtWidgets.QMainWindow()
+        self.win30 = thirdcarpet.Ui_MainWindowthirdcarpet()
+        self.win30.setupUi(self.mw28)
+        self.MainWindow.hide()
+        self.mw28.show()                
+
+    def gotowin31(self):                             #vasl b 4
+        self.mw29 = QtWidgets.QMainWindow()
+        self.win31 = fourthcarpet.Ui_MainWindowfourthcarpet()
+        self.win31.setupUi(self.mw29)
+        self.MainWindow.hide()
+        self.mw29.show()                
+        
+
+    def gotowin32(self):                             #vasl b 6
+        self.mw30 = QtWidgets.QMainWindow()
+        self.win32 = sixthcarpet.Ui_MainWindowsixthcarpet()
+        self.win32.setupUi(self.mw30)
+        self.MainWindow.hide()
+        self.mw30.show()                
+
+    def gotowin33(self):                             #vasl b 2
+        self.mw31 = QtWidgets.QMainWindow()
+        self.win33 = secondcarpet.Ui_MainWindowsecondcarpet()
+        self.win33.setupUi(self.mw31)
+        self.MainWindow.hide()
+        self.mw31.show()                    
+
+    def gotowin34(self):                             #vasl b 7
+        self.mw32 = QtWidgets.QMainWindow()
+        self.win34 = seventhcarpet.Ui_MainWindowseventhcarpet()
+        self.win34.setupUi(self.mw32)
+        self.MainWindow.hide()
+        self.mw32.show()             
+
+    def gotowin35(self):                             #vasl b 5
+        self.mw33 = QtWidgets.QMainWindow()
+        self.win35 = fifthcarpet.Ui_MainWindowfifthcarpet()
+        self.win35.setupUi(self.mw33)
+        self.MainWindow.hide()
+        self.mw33.show()                 
+
+    def gotowin36(self):                             #vasl b 1
+        self.mw34 = QtWidgets.QMainWindow()
+        self.win36 = firstcarpet.Ui_MainWindowfirthcarpet()
+        self.win36.setupUi(self.mw34)
+        self.MainWindow.hide()
+        self.mw34.show()                     
+
+       
+    def gotowin37(self):                             #vasl b 8
+        self.mw35 = QtWidgets.QMainWindow()
+        self.win37 = eighthcarpet.Ui_MainWindoweighthcarpet()
+        self.win37.setupUi(self.mw35)
+        self.MainWindow.hide()
+        self.mw35.show()                        
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
