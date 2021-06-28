@@ -1,5 +1,13 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import shop
+import firstrug
+import secondrug
+import thirdrug
+import fourthrug
+import fifthrug
+import sixthrug
+import seventhrug
+import eighthrug
 
 class Ui_MainWindowrug(object):
     def setupUi(self, MainWindow):
@@ -279,13 +287,21 @@ class Ui_MainWindowrug(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_10.setText(_translate("MainWindow", "Rug"))
         self.pushButton.setText(_translate("MainWindow", "Details"))
+        self.pushButton.clicked.connect(self.gotowin50)
         self.pushButton_2.setText(_translate("MainWindow", "Details"))
+        self.pushButton_2.clicked.connect(self.gotowin51)
         self.pushButton_3.setText(_translate("MainWindow", "Details"))
+        self.pushButton_3.clicked.connect(self.gotowin52)
         self.pushButton_4.setText(_translate("MainWindow", "Details"))
+        self.pushButton_4.clicked.connect(self.gotowin53)
         self.pushButton_5.setText(_translate("MainWindow", "Details"))
+        self.pushButton_5.clicked.connect(self.gotowin54)
         self.pushButton_6.setText(_translate("MainWindow", "Details"))
+        self.pushButton_6.clicked.connect(self.gotowin55)
         self.pushButton_7.setText(_translate("MainWindow", "Details"))
+        self.pushButton_7.clicked.connect(self.gotowin56)
         self.pushButton_8.setText(_translate("MainWindow", "Details"))
+        self.pushButton_8.clicked.connect(self.gotowin57)
         self.pushButton_9.setText(_translate("MainWindow", "back"))
         self.pushButton_9.clicked.connect(self.gotowin27)
         self.pushButton_12.setText(_translate("MainWindow", "PushButton"))
@@ -296,6 +312,62 @@ class Ui_MainWindowrug(object):
         self.win27.setupUi(self.mw25)
         self.MainWindow.hide()
         self.mw25.show()            
+
+    def gotowin50(self):                             #vasl b 1
+        self.mw48 = QtWidgets.QMainWindow()
+        self.win50 = firstrug.Ui_MainWindowfirstrug()
+        self.win50.setupUi(self.mw48)
+        self.MainWindow.hide()
+        self.mw48.show()            
+
+    def gotowin51(self):                             #vasl b 2
+        self.mw49 = QtWidgets.QMainWindow()
+        self.win51 = secondrug.Ui_MainWindowsecondrug()
+        self.win51.setupUi(self.mw49)
+        self.MainWindow.hide()
+        self.mw49.show()            
+
+    def gotowin52(self):                             #vasl b 3
+        self.mw50 = QtWidgets.QMainWindow()
+        self.win52 = thirdrug.Ui_MainWindowthirdrug()
+        self.win52.setupUi(self.mw50)
+        self.MainWindow.hide()
+        self.mw50.show()            
+
+    def gotowin53(self):                             #vasl b 4
+        self.mw51 = QtWidgets.QMainWindow()
+        self.win53 = fourthrug.Ui_MainWindowfourthrug()
+        self.win53.setupUi(self.mw51)
+        self.MainWindow.hide()
+        self.mw51.show()            
+
+    def gotowin54(self):                             #vasl b 5
+        self.mw52 = QtWidgets.QMainWindow()
+        self.win54 = fifthrug.Ui_MainWindowfifthrug()
+        self.win54.setupUi(self.mw52)
+        self.MainWindow.hide()
+        self.mw52.show()            
+
+    def gotowin55(self):                             #vasl b 6
+        self.mw53 = QtWidgets.QMainWindow()
+        self.win55 = sixthrug.Ui_MainWindowsixthrug()
+        self.win55.setupUi(self.mw53)
+        self.MainWindow.hide()
+        self.mw53.show()            
+        
+    def gotowin56(self):                             #vasl b 7
+        self.mw54 = QtWidgets.QMainWindow()
+        self.win56 = seventhrug.Ui_MainWindowseventhrug()
+        self.win56.setupUi(self.mw54)
+        self.MainWindow.hide()
+        self.mw54.show()            
+
+    def gotowin57(self):                             #vasl b 8
+        self.mw55 = QtWidgets.QMainWindow()
+        self.win57 = eighthrug.Ui_MainWindoweighthrug()
+        self.win57.setupUi(self.mw55)
+        self.MainWindow.hide()
+        self.mw55.show()                                             
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
