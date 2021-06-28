@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'secondkid.ui'
+# Form implementation generated from reading ui file 'firstrug.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -134,7 +134,7 @@ class Ui_MainWindow(object):
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(330, 200, 441, 511))
         self.label_4.setText("")
-        self.label_4.setPixmap(QtGui.QPixmap("IMG_2931.JPG"))
+        self.label_4.setPixmap(QtGui.QPixmap("IMG_2882.JPG"))
         self.label_4.setScaledContents(True)
         self.label_4.setObjectName("label_4")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -152,7 +152,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_10.setText(_translate("MainWindow", "Kids Room Carpet"))
+        self.label_10.setText(_translate("MainWindow", "Rug"))
         self.label_3.setText(_translate("MainWindow", "only"))
         self.label_2.setText(_translate("MainWindow", "T"))
         self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
