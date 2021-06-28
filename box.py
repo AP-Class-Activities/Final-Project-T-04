@@ -132,86 +132,6 @@ class Ui_MainWindow(object):
 "    background-color: rgb(26, 179, 179)\n"
 "}")
         self.pushButton_9.setObjectName("pushButton_9")
-        self.lineEdit_8 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_8.setGeometry(QtCore.QRect(40, 420, 191, 51))
-        self.lineEdit_8.setStyleSheet("QLineEdit{\n"
-"    border: 2px solid rgb(38, 38, 48);\n"
-"    border-radius: 15px;\n"
-"    color: #FFF;\n"
-"\n"
-"    background-color: rgb(36, 36, 36);\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-"    border: 2px solid rgb(48, 50, 62)\n"
-"}\n"
-"\n"
-"QLineEdit:focus{\n"
-"    border: 2px solid rgb(35, 218, 233)\n"
-"\n"
-"    background-color: rgb(47, 47, 47)\n"
-"}")
-        self.lineEdit_8.setObjectName("lineEdit_8")
-        self.lineEdit_9 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_9.setGeometry(QtCore.QRect(40, 350, 191, 51))
-        self.lineEdit_9.setStyleSheet("QLineEdit{\n"
-"    border: 2px solid rgb(38, 38, 48);\n"
-"    border-radius: 15px;\n"
-"    color: #FFF;\n"
-"\n"
-"    background-color: rgb(36, 36, 36);\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-"    border: 2px solid rgb(48, 50, 62)\n"
-"}\n"
-"\n"
-"QLineEdit:focus{\n"
-"    border: 2px solid rgb(35, 218, 233)\n"
-"\n"
-"    background-color: rgb(47, 47, 47)\n"
-"}")
-        self.lineEdit_9.setObjectName("lineEdit_9")
-        self.lineEdit_10 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_10.setGeometry(QtCore.QRect(40, 210, 191, 51))
-        self.lineEdit_10.setStyleSheet("QLineEdit{\n"
-"    border: 2px solid rgb(38, 38, 48);\n"
-"    border-radius: 15px;\n"
-"    color: #FFF;\n"
-"\n"
-"    background-color: rgb(36, 36, 36);\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-"    border: 2px solid rgb(48, 50, 62)\n"
-"}\n"
-"\n"
-"QLineEdit:focus{\n"
-"    border: 2px solid rgb(35, 218, 233)\n"
-"\n"
-"    background-color: rgb(47, 47, 47)\n"
-"}")
-        self.lineEdit_10.setObjectName("lineEdit_10")
-        self.lineEdit_11 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_11.setGeometry(QtCore.QRect(40, 280, 191, 51))
-        self.lineEdit_11.setStyleSheet("QLineEdit{\n"
-"    border: 2px solid rgb(38, 38, 48);\n"
-"    border-radius: 15px;\n"
-"    color: #FFF;\n"
-"\n"
-"    background-color: rgb(36, 36, 36);\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-"    border: 2px solid rgb(48, 50, 62)\n"
-"}\n"
-"\n"
-"QLineEdit:focus{\n"
-"    border: 2px solid rgb(35, 218, 233)\n"
-"\n"
-"    background-color: rgb(47, 47, 47)\n"
-"}")
-        self.lineEdit_11.setObjectName("lineEdit_11")
         self.label_8 = QtWidgets.QLabel(self.centralwidget)
         self.label_8.setGeometry(QtCore.QRect(40, 150, 101, 41))
         font = QtGui.QFont()
@@ -354,86 +274,6 @@ class Ui_MainWindow(object):
 "    background-color: rgb(47, 47, 47)\n"
 "}")
         self.plainTextEdit_5.setObjectName("plainTextEdit_5")
-        self.lineEdit_12 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_12.setGeometry(QtCore.QRect(440, 210, 131, 51))
-        self.lineEdit_12.setStyleSheet("QLineEdit{\n"
-"    border: 2px solid rgb(38, 38, 48);\n"
-"    border-radius: 15px;\n"
-"    color: #FFF;\n"
-"\n"
-"    background-color: rgb(36, 36, 36);\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-"    border: 2px solid rgb(48, 50, 62)\n"
-"}\n"
-"\n"
-"QLineEdit:focus{\n"
-"    border: 2px solid rgb(35, 218, 233)\n"
-"\n"
-"    background-color: rgb(47, 47, 47)\n"
-"}")
-        self.lineEdit_12.setObjectName("lineEdit_12")
-        self.lineEdit_13 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_13.setGeometry(QtCore.QRect(440, 350, 131, 51))
-        self.lineEdit_13.setStyleSheet("QLineEdit{\n"
-"    border: 2px solid rgb(38, 38, 48);\n"
-"    border-radius: 15px;\n"
-"    color: #FFF;\n"
-"\n"
-"    background-color: rgb(36, 36, 36);\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-"    border: 2px solid rgb(48, 50, 62)\n"
-"}\n"
-"\n"
-"QLineEdit:focus{\n"
-"    border: 2px solid rgb(35, 218, 233)\n"
-"\n"
-"    background-color: rgb(47, 47, 47)\n"
-"}")
-        self.lineEdit_13.setObjectName("lineEdit_13")
-        self.lineEdit_14 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_14.setGeometry(QtCore.QRect(440, 280, 131, 51))
-        self.lineEdit_14.setStyleSheet("QLineEdit{\n"
-"    border: 2px solid rgb(38, 38, 48);\n"
-"    border-radius: 15px;\n"
-"    color: #FFF;\n"
-"\n"
-"    background-color: rgb(36, 36, 36);\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-"    border: 2px solid rgb(48, 50, 62)\n"
-"}\n"
-"\n"
-"QLineEdit:focus{\n"
-"    border: 2px solid rgb(35, 218, 233)\n"
-"\n"
-"    background-color: rgb(47, 47, 47)\n"
-"}")
-        self.lineEdit_14.setObjectName("lineEdit_14")
-        self.lineEdit_15 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_15.setGeometry(QtCore.QRect(440, 420, 131, 51))
-        self.lineEdit_15.setStyleSheet("QLineEdit{\n"
-"    border: 2px solid rgb(38, 38, 48);\n"
-"    border-radius: 15px;\n"
-"    color: #FFF;\n"
-"\n"
-"    background-color: rgb(36, 36, 36);\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-"    border: 2px solid rgb(48, 50, 62)\n"
-"}\n"
-"\n"
-"QLineEdit:focus{\n"
-"    border: 2px solid rgb(35, 218, 233)\n"
-"\n"
-"    background-color: rgb(47, 47, 47)\n"
-"}")
-        self.lineEdit_15.setObjectName("lineEdit_15")
         self.plainTextEdit_7 = QtWidgets.QPlainTextEdit(self.centralwidget)
         self.plainTextEdit_7.setGeometry(QtCore.QRect(120, 550, 221, 101))
         self.plainTextEdit_7.setStyleSheet("QPlainTextEdit{\n"
@@ -492,9 +332,177 @@ class Ui_MainWindow(object):
 "    background-color: rgb(255, 170, 0)\n"
 "}")
         self.pushButton_3.setObjectName("pushButton_3")
-        self.lineEdit_17 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_17.setGeometry(QtCore.QRect(210, 670, 131, 71))
-        self.lineEdit_17.setStyleSheet("QLineEdit{\n"
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(40, 210, 191, 51))
+        self.label_2.setStyleSheet("QLabel{\n"
+"    border: 2px solid rgb(38, 38, 48);\n"
+"    border-radius: 15px;\n"
+"    color: #FFF;\n"
+"\n"
+"    background-color: rgb(36, 36, 36);\n"
+"}\n"
+"\n"
+"QLabel:hover{\n"
+"    border: 2px solid rgb(48, 50, 62)\n"
+"}\n"
+"\n"
+"QLable:focus{\n"
+"    border: 2px solid rgb(35, 218, 233)\n"
+"\n"
+"    background-color: rgb(47, 47, 47)\n"
+"}")
+        self.label_2.setText("")
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(40, 280, 191, 51))
+        self.label_3.setStyleSheet("QLabel{\n"
+"    border: 2px solid rgb(38, 38, 48);\n"
+"    border-radius: 15px;\n"
+"    color: #FFF;\n"
+"\n"
+"    background-color: rgb(36, 36, 36);\n"
+"}\n"
+"\n"
+"QLabel:hover{\n"
+"    border: 2px solid rgb(48, 50, 62)\n"
+"}\n"
+"\n"
+"QLable:focus{\n"
+"    border: 2px solid rgb(35, 218, 233)\n"
+"\n"
+"    background-color: rgb(47, 47, 47)\n"
+"}")
+        self.label_3.setText("")
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(40, 350, 191, 51))
+        self.label_4.setStyleSheet("QLabel{\n"
+"    border: 2px solid rgb(38, 38, 48);\n"
+"    border-radius: 15px;\n"
+"    color: #FFF;\n"
+"\n"
+"    background-color: rgb(36, 36, 36);\n"
+"}\n"
+"\n"
+"QLabel:hover{\n"
+"    border: 2px solid rgb(48, 50, 62)\n"
+"}\n"
+"\n"
+"QLable:focus{\n"
+"    border: 2px solid rgb(35, 218, 233)\n"
+"\n"
+"    background-color: rgb(47, 47, 47)\n"
+"}")
+        self.label_4.setText("")
+        self.label_4.setObjectName("label_4")
+        self.label_12 = QtWidgets.QLabel(self.centralwidget)
+        self.label_12.setGeometry(QtCore.QRect(40, 420, 191, 51))
+        self.label_12.setStyleSheet("QLabel{\n"
+"    border: 2px solid rgb(38, 38, 48);\n"
+"    border-radius: 15px;\n"
+"    color: #FFF;\n"
+"\n"
+"    background-color: rgb(36, 36, 36);\n"
+"}\n"
+"\n"
+"QLabel:hover{\n"
+"    border: 2px solid rgb(48, 50, 62)\n"
+"}\n"
+"\n"
+"QLable:focus{\n"
+"    border: 2px solid rgb(35, 218, 233)\n"
+"\n"
+"    background-color: rgb(47, 47, 47)\n"
+"}")
+        self.label_12.setText("")
+        self.label_12.setObjectName("label_12")
+        self.label_13 = QtWidgets.QLabel(self.centralwidget)
+        self.label_13.setGeometry(QtCore.QRect(440, 210, 131, 51))
+        self.label_13.setStyleSheet("QLabel{\n"
+"    border: 2px solid rgb(38, 38, 48);\n"
+"    border-radius: 15px;\n"
+"    color: #FFF;\n"
+"\n"
+"    background-color: rgb(36, 36, 36);\n"
+"}\n"
+"\n"
+"QLabel:hover{\n"
+"    border: 2px solid rgb(48, 50, 62)\n"
+"}\n"
+"\n"
+"QLable:focus{\n"
+"    border: 2px solid rgb(35, 218, 233)\n"
+"\n"
+"    background-color: rgb(47, 47, 47)\n"
+"}")
+        self.label_13.setText("")
+        self.label_13.setObjectName("label_13")
+        self.label_14 = QtWidgets.QLabel(self.centralwidget)
+        self.label_14.setGeometry(QtCore.QRect(440, 280, 131, 51))
+        self.label_14.setStyleSheet("QLabel{\n"
+"    border: 2px solid rgb(38, 38, 48);\n"
+"    border-radius: 15px;\n"
+"    color: #FFF;\n"
+"\n"
+"    background-color: rgb(36, 36, 36);\n"
+"}\n"
+"\n"
+"QLabel:hover{\n"
+"    border: 2px solid rgb(48, 50, 62)\n"
+"}\n"
+"\n"
+"QLable:focus{\n"
+"    border: 2px solid rgb(35, 218, 233)\n"
+"\n"
+"    background-color: rgb(47, 47, 47)\n"
+"}")
+        self.label_14.setText("")
+        self.label_14.setObjectName("label_14")
+        self.label_15 = QtWidgets.QLabel(self.centralwidget)
+        self.label_15.setGeometry(QtCore.QRect(440, 350, 131, 51))
+        self.label_15.setStyleSheet("QLabel{\n"
+"    border: 2px solid rgb(38, 38, 48);\n"
+"    border-radius: 15px;\n"
+"    color: #FFF;\n"
+"\n"
+"    background-color: rgb(36, 36, 36);\n"
+"}\n"
+"\n"
+"QLabel:hover{\n"
+"    border: 2px solid rgb(48, 50, 62)\n"
+"}\n"
+"\n"
+"QLable:focus{\n"
+"    border: 2px solid rgb(35, 218, 233)\n"
+"\n"
+"    background-color: rgb(47, 47, 47)\n"
+"}")
+        self.label_15.setText("")
+        self.label_15.setObjectName("label_15")
+        self.label_16 = QtWidgets.QLabel(self.centralwidget)
+        self.label_16.setGeometry(QtCore.QRect(440, 420, 131, 51))
+        self.label_16.setStyleSheet("QLabel{\n"
+"    border: 2px solid rgb(38, 38, 48);\n"
+"    border-radius: 15px;\n"
+"    color: #FFF;\n"
+"\n"
+"    background-color: rgb(36, 36, 36);\n"
+"}\n"
+"\n"
+"QLabel:hover{\n"
+"    border: 2px solid rgb(48, 50, 62)\n"
+"}\n"
+"\n"
+"QLable:focus{\n"
+"    border: 2px solid rgb(35, 218, 233)\n"
+"\n"
+"    background-color: rgb(47, 47, 47)\n"
+"}")
+        self.label_16.setText("")
+        self.label_16.setObjectName("label_16")
+        self.label_17 = QtWidgets.QLabel(self.centralwidget)
+        self.label_17.setGeometry(QtCore.QRect(210, 670, 131, 71))
+        self.label_17.setStyleSheet("QLabel{\n"
 "    border: 2px solid rgb(38, 38, 48);\n"
 "    border-radius: 1px;\n"
 "    color: #FFF;\n"
@@ -502,16 +510,17 @@ class Ui_MainWindow(object):
 "    background-color: rgb(36, 36, 36);\n"
 "}\n"
 "\n"
-"QLineEdit:hover{\n"
+"QLabel:hover{\n"
 "    border: 2px solid rgb(48, 50, 62)\n"
 "}\n"
 "\n"
-"QLineEdit:focus{\n"
+"QLable:focus{\n"
 "    border: 2px solid rgb(35, 218, 233)\n"
 "\n"
 "    background-color: rgb(47, 47, 47)\n"
 "}")
-        self.lineEdit_17.setObjectName("lineEdit_17")
+        self.label_17.setText("")
+        self.label_17.setObjectName("label_17")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 18))
