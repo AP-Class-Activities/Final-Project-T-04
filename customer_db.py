@@ -56,6 +56,6 @@ class DataBase:
         lst = self.read_list()
         count = 624311
         for i in lst:
-            count += 1
+            count += 7
         st_counter = str(count)
         return st_counter
