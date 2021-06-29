@@ -19,6 +19,7 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QtCore.QSize(400, 300))
         MainWindow.setMaximumSize(QtCore.QSize(400, 300))
         MainWindow.setStyleSheet("background-color:rgb(26,26,26);")
+        self.MainWindow = MainWindow
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
