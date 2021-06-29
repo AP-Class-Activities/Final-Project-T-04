@@ -1,8 +1,14 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+<<<<<<< HEAD
 import carpet
 import boxmessage
 import favoritemessage
 import box
+=======
+from product_db import DataBase
+import json
+
+>>>>>>> dc5ec55 (connecting comments)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -192,23 +198,46 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
+        temp = DataBase().read_list()
+        dict = temp[0]
+        name = "Name : " + dict["name"]
+        discription = dict["discription"]
+        price = str(dict["price"]) + " T"
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_10.setText(_translate("MainWindow", "Iranian Carpet"))
-        self.label_2.setText(_translate("MainWindow", "T"))
+        self.label_2.setText(_translate("MainWindow", price))
         self.label_3.setText(_translate("MainWindow", "only"))
+        self.label_17.setText(_translate("MainWindow", name + "\n \n" +discription))
         self.pushButton.setText(_translate("MainWindow", "Order now"))
         self.pushButton.clicked.connect(self.gotowin81)
         self.label_5.setText(_translate("MainWindow", "Comment"))
         self.pushButton_9.setText(_translate("MainWindow", "back"))
         self.pushButton_2.setText(_translate("MainWindow", "Send"))
         self.pushButton_3.setText(_translate("MainWindow", "Show"))
+<<<<<<< HEAD
     def gotowin62(self):                             #vasl b carpet
         self.mw60 = QtWidgets.QMainWindow()
         self.win62 = carpet.Ui_MainWindowcarpet()
         self.win62.setupUi(self.mw60)
         self.MainWindow.hide()
         self.mw60.show()                
+=======
+        self.pushButton_2.clicked.connect(self.send_comment)
+
+    def send_comment(self):
+        comment = self.plainTextEdit.toPlainText()
+        temp = DataBase().read_list()
+        dict = temp[0]
+        ID = dict["ID"]
+        DataBase().delete(ID)
+        dict["comments"].append(comment)
+        temp2 = DataBase().read_list()
+        final = temp2.insert(0,dict)
+        file = open("C:\\DataBase\\product.json","w")
+        json.dump(temp2,file)
+
+>>>>>>> dc5ec55 (connecting comments)
 
     def gotowin71(self):                             #vasl b sabadkharid dialog
         self.mw69 = QtWidgets.QMainWindow()
