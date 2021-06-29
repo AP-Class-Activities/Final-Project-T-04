@@ -140,7 +140,7 @@ class Ui_MainWindow(object):
         self.label_8.setStyleSheet("color: rgb(225, 225, 225)")
         self.label_8.setObjectName("label_8")
         self.label_9 = QtWidgets.QLabel(self.centralwidget)
-        self.label_9.setGeometry(QtCore.QRect(120, 680, 91, 41))
+        self.label_9.setGeometry(QtCore.QRect(350, 630, 91, 41))
         font = QtGui.QFont()
         font.setPointSize(9)
         self.label_9.setFont(font)
@@ -315,7 +315,7 @@ class Ui_MainWindow(object):
 "}")
         self.lineEdit_16.setObjectName("lineEdit_16")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(450, 670, 221, 71))
+        self.pushButton_3.setGeometry(QtCore.QRect(550, 670, 221, 71))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.pushButton_3.setFont(font)
@@ -501,7 +501,7 @@ class Ui_MainWindow(object):
         self.label_16.setText("")
         self.label_16.setObjectName("label_16")
         self.label_17 = QtWidgets.QLabel(self.centralwidget)
-        self.label_17.setGeometry(QtCore.QRect(210, 670, 131, 71))
+        self.label_17.setGeometry(QtCore.QRect(340, 670, 111, 71))
         self.label_17.setStyleSheet("QLabel{\n"
 "    border: 2px solid rgb(38, 38, 48);\n"
 "    border-radius: 1px;\n"
@@ -521,6 +521,24 @@ class Ui_MainWindow(object):
 "}")
         self.label_17.setText("")
         self.label_17.setObjectName("label_17")
+        self.pushButton_13 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_13.setGeometry(QtCore.QRect(30, 670, 221, 71))
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        self.pushButton_13.setFont(font)
+        self.pushButton_13.setStyleSheet("QPushButton{\n"
+"    border-radius: 1px;\n"
+"\n"
+"    background-color: rgb(255, 170, 0);\n"
+"\n"
+"    color: rgb(255, 225, 225);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"\n"
+"    background-color: rgb(26, 179, 179)\n"
+"}")
+        self.pushButton_13.setObjectName("pushButton_13")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 18))
@@ -551,6 +569,7 @@ class Ui_MainWindow(object):
         self.pushButton_11.setText(_translate("MainWindow", "Delete"))
         self.pushButton_12.setText(_translate("MainWindow", "Delete"))
         self.pushButton_3.setText(_translate("MainWindow", "Pay"))
+        self.pushButton_13.setText(_translate("MainWindow", "Back"))
 
 
 if __name__ == "__main__":
