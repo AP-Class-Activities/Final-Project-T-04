@@ -230,7 +230,8 @@ class Ui_MainWindowshopkeepercontrol(object):
         location = temp["location"]
         profit = str(temp["profit"])
         wallet = str(temp["wallet"])
-        products = str(temp["products"])
+        product = str(temp["products"])
+        products = product[1:-1]
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "shop"))

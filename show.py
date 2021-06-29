@@ -1,5 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import firstcarpet
+from product_db import DataBase
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -85,11 +86,16 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
+        ID = firstcarpet.Ui_MainWindow().ID()
+        dict = DataBase().search(ID)
+        comment = str(dict["comments"])
+        comments = comment[1:-1]
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_10.setText(_translate("MainWindow", "Comments"))
         self.pushButton_9.setText(_translate("MainWindow", "back"))
         self.pushButton_9.clicked.connect(self.gotowin62)
+        self.listWidget.addItem(comments)
 
     def gotowin62(self):                             #bastan
         self.close()

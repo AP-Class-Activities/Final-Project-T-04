@@ -4,7 +4,6 @@ import boxmessage
 import favoritemessage
 import box
 from product_db import DataBase
-import json
 import show
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -194,7 +193,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        ID_of_product = "PR546787"
+        ID_of_product = self.ID()
         dict = DataBase().search(ID_of_product)
         name = "Name : " + dict["name"]
         discription = dict["discription"]
@@ -213,15 +212,17 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(_translate("MainWindow", "Show"))
         self.pushButton_3.clicked.connect(self.gotowin83)
         self.pushButton_2.clicked.connect(self.send_comment)
-    def send_comment(self):
+    def ID(self):
+        return "PR546787"
+    def send_comment(self):    #ferestadan comment
         comment = self.plainTextEdit.toPlainText()
-        ID_of_product = "PR546787"
+        ID_of_product = self.ID()
         temp = DataBase().search(ID_of_product)
         temp["comments"].append(comment)
         ID = temp["ID"]
         DataBase().delete(ID)
         add_to_db = DataBase().add(temp)
-
+    
     def gotowin62(self):                             #vasl b carpet
         self.mw60 = QtWidgets.QMainWindow()
         self.win62 = carpet.Ui_MainWindowcarpet()

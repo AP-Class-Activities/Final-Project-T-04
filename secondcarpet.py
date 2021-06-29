@@ -194,7 +194,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        ID_of_product = "PR546796"
+        ID_of_product = self.ID()
         dict = DataBase().search(ID_of_product)
         name = "Name : " + dict["name"]
         discription = dict["discription"]
@@ -213,10 +213,12 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(_translate("MainWindow", "Show"))
         self.pushButton_3.clicked.connect(self.gotowin83)
         self.pushButton_2.clicked.connect(self.send_comment)
+    def ID(self):
+        return "PR546796"
 
     def send_comment(self):
         comment = self.plainTextEdit.toPlainText()
-        ID_of_product = "PR546796"
+        ID_of_product = self.ID()
         temp = DataBase().search(ID_of_product)
         temp["comments"].append(comment)
         ID = temp["ID"]
