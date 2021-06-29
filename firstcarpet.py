@@ -194,8 +194,8 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        temp = DataBase().read_list()
-        dict = temp[0]
+        ID_of_product = "PR546787"
+        dict = DataBase().search(ID_of_product)
         name = "Name : " + dict["name"]
         discription = dict["discription"]
         price = str(dict["price"]) + " T"
@@ -215,15 +215,12 @@ class Ui_MainWindow(object):
         self.pushButton_2.clicked.connect(self.send_comment)
     def send_comment(self):
         comment = self.plainTextEdit.toPlainText()
-        temp = DataBase().read_list()
-        dict = temp[0]
-        dict["comments"].append(comment)
-        ID = dict["ID"]
+        ID_of_product = "PR546787"
+        temp = DataBase().search(ID_of_product)
+        temp["comments"].append(comment)
+        ID = temp["ID"]
         DataBase().delete(ID)
-        temp2 = DataBase().read_list()
-        temp2.insert(0,dict)
-        file = open("C:\\DataBase\\product.json","w")
-        json.dump(temp2,file)
+        add_to_db = DataBase().add(temp)
 
     def gotowin62(self):                             #vasl b carpet
         self.mw60 = QtWidgets.QMainWindow()

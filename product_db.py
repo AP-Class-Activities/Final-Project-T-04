@@ -23,7 +23,7 @@ class DataBase:
                 if key == i:
                     return dictionaries
         else:
-            return "product not found!!!!"
+            pass
     def search_value(self,value):
         lst = self.read_list()
         for dictionaries in lst:

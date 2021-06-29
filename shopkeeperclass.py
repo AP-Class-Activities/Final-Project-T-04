@@ -1,5 +1,5 @@
 class Shopkeeper:
-    def __init__(self, user, password, product, location, score, order, wallet, sell, email, profit, income ,ID):
+    def __init__(self, user, password, product, location, score, order, wallet, sell, email, profit, income ,ID,cart):
         self.__user = user
         self.__password = password
         self.__product = product
@@ -12,6 +12,7 @@ class Shopkeeper:
         self.__profit = profit
         self.__ID = ID
         self.__income = income
+        self.__cart = cart
 
     @property
     def income(self): 
@@ -20,6 +21,14 @@ class Shopkeeper:
     @income.setter
     def income(self,value): 
         self.__income = value
+    
+    @property
+    def cart(self): 
+        return self.__cart
+    
+    @cart.setter
+    def cart(self,value): 
+        self.__cart = value
 
     @property
     def user(self): 
@@ -118,5 +127,5 @@ class Shopkeeper:
         self.__status = value
 
     def dict(self):
-        A = {"user":self.user , "password":self.password, "email":self.email,"wallet":self.wallet , "products":self.product , "location":self.location , "sold items":self.sell , "score":self.score , "ID":self.ID,"orders":self.order,"profit":self.profit}
+        A = {"user":self.user , "password":self.password, "email":self.email,"wallet":self.wallet , "products":self.product , "location":self.location , "sold items":self.sell , "score":self.score , "ID":self.ID,"orders":self.order,"profit":self.profit, "cart":self.cart}
         return A
