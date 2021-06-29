@@ -308,14 +308,14 @@ class Ui_MainWindowkids(object):
 
     def gotowin40(self):                             #vasl b 1
         self.mw38 = QtWidgets.QMainWindow()
-        self.win40 = firstkid.Ui_MainWindowfirstkid()
+        self.win40 = firstkid.Ui_MainWindow()
         self.win40.setupUi(self.mw38)
         self.MainWindow.hide()
         self.mw38.show()                       
 
     def gotowin41(self):                             #vasl b 2
         self.mw39 = QtWidgets.QMainWindow()
-        self.win41 = secondkid.Ui_MainWindowsecondkid()
+        self.win41 = secondkid.Ui_MainWindow()
         self.win41.setupUi(self.mw39)
         self.MainWindow.hide()
         self.mw39.show()            
@@ -323,7 +323,7 @@ class Ui_MainWindowkids(object):
 
     def gotowin42(self):                             #vasl b 3
         self.mw40 = QtWidgets.QMainWindow()
-        self.win42 = thirdkid.Ui_MainWindowthirdkid()
+        self.win42 = thirdkid.Ui_MainWindow()
         self.win42.setupUi(self.mw40)
         self.MainWindow.hide()
         self.mw40.show()            
@@ -331,35 +331,35 @@ class Ui_MainWindowkids(object):
 
     def gotowin43(self):                             #vasl b 4
         self.mw41 = QtWidgets.QMainWindow()
-        self.win43 = fourthkid.Ui_MainWindowfourthkid()
+        self.win43 = fourthkid.Ui_MainWindow()
         self.win43.setupUi(self.mw41)
         self.MainWindow.hide()
         self.mw41.show()            
 
     def gotowin44(self):                             #vasl b 5
         self.mw42 = QtWidgets.QMainWindow()
-        self.win44 = fifthkid.Ui_MainWindowfifthkid()
+        self.win44 = fifthkid.Ui_MainWindow()
         self.win44.setupUi(self.mw42)
         self.MainWindow.hide()
         self.mw42.show()            
 
     def gotowin45(self):                             #vasl b 6
         self.mw43 = QtWidgets.QMainWindow()
-        self.win45 = sixthkid.Ui_MainWindowsixthkid()
+        self.win45 = sixthkid.Ui_MainWindow()
         self.win45.setupUi(self.mw43)
         self.MainWindow.hide()
         self.mw43.show()            
 
     def gotowin46(self):                             #vasl b 7
         self.mw44 = QtWidgets.QMainWindow()
-        self.win46 = seventhkid.Ui_MainWindowsevenkid()
+        self.win46 = seventhkid.Ui_MainWindow()
         self.win46.setupUi(self.mw44)
         self.MainWindow.hide()
         self.mw44.show()            
         
     def gotowin47(self):                             #vasl b 8
         self.mw45 = QtWidgets.QMainWindow()
-        self.win47 = eighthkid.Ui_MainWindoweighthkid()
+        self.win47 = eighthkid.Ui_MainWindow()
         self.win47.setupUi(self.mw45)
         self.MainWindow.hide()
         self.mw45.show()                            
