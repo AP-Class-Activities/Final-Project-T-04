@@ -1,5 +1,5 @@
 class product:
-    def __init__(self,name,count,code,sellers_list,score,comments,discription):
+    def __init__(self,name,count,ID,sellers_list,score,comments,discription):
         self.__name = name
         self.__count = count
         self.__ID = ID    
