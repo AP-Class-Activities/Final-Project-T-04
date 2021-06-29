@@ -248,7 +248,7 @@ class Ui_MainWindow(object):
         self.win81.setupUi(self.mw79)
         self.mw79.show()            
 
-    def gotowin83(self):                             #vasl b favoritmessage dialog
+    def gotowin83(self):                             #vasl b show
         self.mw81 = QtWidgets.QMainWindow()
         self.win83 = show.Ui_MainWindow()
         self.win83.setupUi(self.mw81)

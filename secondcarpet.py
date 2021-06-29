@@ -3,6 +3,7 @@ import carpet
 import boxmessage
 import favoritemessage
 import box
+import show
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -231,7 +232,7 @@ class Ui_MainWindow(object):
         self.MainWindow.hide()
         self.mw60.show()                
 
-    def gotowin83(self):                             #vasl b favoritmessage dialog
+    def gotowin83(self):                             #vasl b show
         self.mw81 = QtWidgets.QMainWindow()
         self.win83 = show.Ui_MainWindow()
         self.win83.setupUi(self.mw81)
