@@ -1,5 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import shopkeepercontrol
+from product_db import DataBase
+import Qdialog
 
 class Ui_MainWindowaddproducts(object):
     def setupUi(self, MainWindow):
@@ -97,9 +99,11 @@ class Ui_MainWindowaddproducts(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "send"))
+        self.pushButton.clicked.connect(self.add_product)
         self.label.setText(_translate("MainWindow", "adding products"))
         self.pushButton_2.setText(_translate("MainWindow", "back"))
         self.pushButton_2.clicked.connect(self.gotowin16)
+        self.lineEdit_3.setText(_translate("ManiWindow","{\"name\":\"your products name\",\"price\":\"your products price\",\"discription\":\"your products discription\",\"location\":\"your location\"}"))
 
     def gotowin16(self):                        #back b shopkeepercontrol
         self.mw14 = QtWidgets.QMainWindow()
@@ -107,6 +111,22 @@ class Ui_MainWindowaddproducts(object):
         self.win16.setupUi(self.mw14)
         self.MainWindow.hide()
         self.mw14.show()    
+
+    def add_product(self):
+        text = self.lineEdit_3.text()
+        dict = eval(text)
+        dict["ID"]= DataBase().counter()
+        if dict["name"] != "your products name":
+                DataBase().add(dict)
+                self.mw1 = QtWidgets.QMainWindow()
+                self.win3 = Qdialog.Ui_MainWindow()
+                self.win3.setupUi(self.mw1)
+                self.mw1.show()
+        else:
+                pass
+        
+
+        
 
 if __name__ == "__main__":
     import sys

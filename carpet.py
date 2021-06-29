@@ -305,14 +305,14 @@ class Ui_MainWindowcarpet(object):
 
     def gotowin30(self):                             #vasl b third
         self.mw28 = QtWidgets.QMainWindow()
-        self.win30 = thirdcarpet.Ui_MainWindowthirdcarpet()
+        self.win30 = thirdcarpet.Ui_MainWindow()
         self.win30.setupUi(self.mw28)
         self.MainWindow.hide()
         self.mw28.show()                
 
     def gotowin31(self):                             #vasl b 4
         self.mw29 = QtWidgets.QMainWindow()
-        self.win31 = fourthcarpet.Ui_MainWindowfourthcarpet()
+        self.win31 = fourthcarpet.Ui_MainWindow()
         self.win31.setupUi(self.mw29)
         self.MainWindow.hide()
         self.mw29.show()                
@@ -320,35 +320,35 @@ class Ui_MainWindowcarpet(object):
 
     def gotowin32(self):                             #vasl b 6
         self.mw30 = QtWidgets.QMainWindow()
-        self.win32 = sixthcarpet.Ui_MainWindowsixthcarpet()
+        self.win32 = sixthcarpet.Ui_MainWindow()
         self.win32.setupUi(self.mw30)
         self.MainWindow.hide()
         self.mw30.show()                
 
     def gotowin33(self):                             #vasl b 2
         self.mw31 = QtWidgets.QMainWindow()
-        self.win33 = secondcarpet.Ui_MainWindowsecondcarpet()
+        self.win33 = secondcarpet.Ui_MainWindow()
         self.win33.setupUi(self.mw31)
         self.MainWindow.hide()
         self.mw31.show()                    
 
     def gotowin34(self):                             #vasl b 7
         self.mw32 = QtWidgets.QMainWindow()
-        self.win34 = seventhcarpet.Ui_MainWindowseventhcarpet()
+        self.win34 = seventhcarpet.Ui_MainWindow()
         self.win34.setupUi(self.mw32)
         self.MainWindow.hide()
         self.mw32.show()             
 
     def gotowin35(self):                             #vasl b 5
         self.mw33 = QtWidgets.QMainWindow()
-        self.win35 = fifthcarpet.Ui_MainWindowfifthcarpet()
+        self.win35 = fifthcarpet.Ui_MainWindow()
         self.win35.setupUi(self.mw33)
         self.MainWindow.hide()
         self.mw33.show()                 
 
     def gotowin36(self):                             #vasl b 1
         self.mw34 = QtWidgets.QMainWindow()
-        self.win36 = firstcarpet.Ui_MainWindowfirthcarpet()
+        self.win36 = firstcarpet.Ui_MainWindow()
         self.win36.setupUi(self.mw34)
         self.MainWindow.hide()
         self.mw34.show()                     
@@ -356,7 +356,7 @@ class Ui_MainWindowcarpet(object):
        
     def gotowin37(self):                             #vasl b 8
         self.mw35 = QtWidgets.QMainWindow()
-        self.win37 = eighthcarpet.Ui_MainWindoweighthcarpet()
+        self.win37 = eighthcarpet.Ui_MainWindow()
         self.win37.setupUi(self.mw35)
         self.MainWindow.hide()
         self.mw35.show()                        

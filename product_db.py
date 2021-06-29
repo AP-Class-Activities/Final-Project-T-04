@@ -46,3 +46,10 @@ class DataBase:
         temp.append(dictionary)
         file = open(self.name,"w")
         json.dump(temp,file)
+    def counter(self):
+        lst = self.read_list()
+        count = 125389
+        for i in lst:
+            count += 6
+        st_counter = "PR"+str(count)
+        return st_counter

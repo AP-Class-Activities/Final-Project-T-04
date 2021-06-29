@@ -1,6 +1,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import  welcome
 import  shopkeepercontrol
+from shopkeeper_db import DataBase
+import passworderror
 class Ui_MainWindowshopkeeper(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -146,11 +148,20 @@ class Ui_MainWindowshopkeeper(object):
 
 
     def gotowin11(self):                             #VASL B SHOPKEEPERCONTROL
-        self.mw9 = QtWidgets.QMainWindow()
-        self.win11 = shopkeepercontrol.Ui_MainWindowshopkeepercontrol()
-        self.win11.setupUi(self.mw9)
-        self.MainWindow.hide()
-        self.mw9.show()    
+        passw = self.lineEdit_2.text()
+        user = self.lineEdit.text()
+        check_pass = DataBase().check(user,passw)
+        if check_pass:
+            self.mw12 = QtWidgets.QMainWindow()
+            self.win14 = shopkeepercontrol.Ui_MainWindowshopkeepercontrol()
+            self.win14.setupUi(self.mw12)
+            self.MainWindow.hide()
+            self.mw12.show()    
+        else:
+            self.mw1 = QtWidgets.QMainWindow()
+            self.win3 = passworderror.Ui_MainWindow()
+            self.win3.setupUi(self.mw1)
+            self.mw1.show()
 
 if __name__ == "__main__":
     import sys
