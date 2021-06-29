@@ -203,6 +203,7 @@ class Ui_MainWindow(object):
         self.pushButton_9.setText(_translate("MainWindow", "back"))
         self.pushButton_2.setText(_translate("MainWindow", "Send"))
         self.pushButton_3.setText(_translate("MainWindow", "Show"))
+        self.pushButton_3.clicked.connect(self.gotowin83)
 
 
     def gotowin80(self):                             #vasl b favoritmessage dialog
@@ -230,6 +231,11 @@ class Ui_MainWindow(object):
         self.MainWindow.hide()
         self.mw60.show()                
 
+    def gotowin83(self):                             #vasl b favoritmessage dialog
+        self.mw81 = QtWidgets.QMainWindow()
+        self.win83 = show.Ui_MainWindow()
+        self.win83.setupUi(self.mw81)
+        self.mw81.show()      
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
