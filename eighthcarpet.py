@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import carpet
-
+import boxmessage
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -126,6 +126,7 @@ class Ui_MainWindow(object):
         self.pushButton_13.setIconSize(QtCore.QSize(40, 40))
         self.pushButton_13.setCheckable(False)
         self.pushButton_13.setObjectName("pushButton_13")
+        self.pushButton_13.clicked.connect(self.gotowin75)
         self.label_17 = QtWidgets.QLabel(self.centralwidget)
         self.label_17.setGeometry(QtCore.QRect(70, 310, 221, 121))
         self.label_17.setStyleSheet("QLabel{\n"
@@ -196,6 +197,10 @@ class Ui_MainWindow(object):
         self.MainWindow.hide()
         self.mw58.show()            
 
+    def gotowin75(self):                             #vasl b sabadkharid dialog
+        self.mw73 = QtWidgets.QMainWindow()
+        self.win75 = boxmessage.Ui_MainWindow()
+        self.win75.setupUi(self.mw73)
 
 if __name__ == "__main__":
     import sys
