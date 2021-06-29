@@ -89,6 +89,12 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_10.setText(_translate("MainWindow", "Comments"))
         self.pushButton_9.setText(_translate("MainWindow", "back"))
+        self.pushButton_9.clicked.connect(self.gotowin62)
+
+    def gotowin62(self):                             #vasl b kids
+        self.mw60 = QtWidgets.QMainWindow()
+        self.MainWindow.hide()
+                          
 
 
 if __name__ == "__main__":
