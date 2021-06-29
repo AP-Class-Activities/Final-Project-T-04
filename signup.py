@@ -212,7 +212,7 @@ class Ui_MainWindowsignup(object):
         password = self.lineEdit_2.text()
         email = self.lineEdit_3.text()
         ID = shopkeeper_db.DataBase().counter()
-        dictionary = shopkeeperclass.Shopkeeper(user, password, [], "", 0, [], 0, [], email, 0, ID)
+        dictionary = shopkeeperclass.Shopkeeper(user, password, [], "", 0, [], 0, [], email, 0, 0,ID)
         dictionary2 = dictionary.dict()
         check = admin_db.acceptSH().request(dictionary2)
         ADD = shopkeeper_db.DataBase().add(dictionary2)

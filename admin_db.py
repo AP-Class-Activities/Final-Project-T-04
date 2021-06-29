@@ -1,6 +1,8 @@
 import json
 import shopkeeper_db
 import product_db
+from login_db import DataBase as db
+from shopkeeper_db import DataBase as db2
 
 class DataBase:
     def __init__(self):
@@ -83,33 +85,43 @@ class acceptSH:
         json.dump(temp,file)
 
 class acceptPR:
-    def __ini__(self,name="C:\\DataBase\\accept_products.json"):
+    def __init__(self,name="C:\\DataBase\\accept_products.json"):
         self.name = name
     def read_list(self):
         file = open("C:\\DataBase\\accept_products.json","r")
         return json.load(file)
-    def request(self,new):
-        temp = self.read_list()
-        temp.append(new)
+    def request(self,dict):
+        dict = dict
+        temp = acceptPR().read_list()
+        temp.append(dict)
         file = open("C:\\DataBase\\accept_products.json","w")
         json.dump(temp,file)
     def show1(self):
-        temp = self.read_list()
+        temp = acceptPR().read_list()
         self.A = temp[0]
         return self.A
     def show2(self):
-        temp = self.read_list()
+        temp = acceptPR().read_list()
         self.A = str(temp[0])
         return self.A
     def accept(self):
-        product_db.DataBase().add(self.show1())
-        temp = self.read_list()
+        temp = acceptPR().read_list()
+        dic = temp[0]
+        name = dic["name"]
+        temp1 = db().dict()
+        ID = temp1["ID"]
+        temp2 = db2().search(ID)
+        delt2 = db2().delete(ID)
+        temp2["products"].append(name)
+        db2().add(temp2)
+        product_db.DataBase().add(acceptPR().show1())
+        temp = acceptPR().read_list()
         del temp[0]
         file = open("C:\\DataBase\\accept_products.json","w")
         json.dump(temp,file)
 
     def reject(self):
-        temp = self.read_list()
+        temp = acceptPR().read_list()
         del temp[0]
         file = open(self.name,"w")
         json.dump(temp,file)

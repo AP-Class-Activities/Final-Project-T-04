@@ -2,6 +2,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import shopkeepercontrol
 from product_db import DataBase
 import Qdialog
+from login_db import DataBase as db
+from shopkeeper_db import DataBase as db2
+from admin_db import acceptPR
 
 class Ui_MainWindowaddproducts(object):
     def setupUi(self, MainWindow):
@@ -112,12 +115,12 @@ class Ui_MainWindowaddproducts(object):
         self.MainWindow.hide()
         self.mw14.show()    
 
-    def add_product(self):
+    def add_product(self,ID):
         text = self.lineEdit_3.text()
         dict = eval(text)
         dict["ID"]= DataBase().counter()
+        acceptPR().request(dict)
         if dict["name"] != "your products name":
-                DataBase().add(dict)
                 self.mw1 = QtWidgets.QMainWindow()
                 self.win3 = Qdialog.Ui_MainWindow()
                 self.win3.setupUi(self.mw1)

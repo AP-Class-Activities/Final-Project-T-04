@@ -1,5 +1,5 @@
 class Shopkeeper:
-    def __init__(self, user, password, product, location, score, order, wallet, sell, email, profit, ID):
+    def __init__(self, user, password, product, location, score, order, wallet, sell, email, profit, income ,ID):
         self.__user = user
         self.__password = password
         self.__product = product
@@ -11,22 +11,15 @@ class Shopkeeper:
         self.__email = email
         self.__profit = profit
         self.__ID = ID
+        self.__income = income
 
     @property
-    def name(self): 
-        return self.__name
+    def income(self): 
+        return self.__income
     
-    @name.setter
-    def name(self,value): 
-        self.__name = value
-
-    @property
-    def last(self): 
-        return self.__last
-    
-    @last.setter
-    def last(self,value): 
-        self.__last = value
+    @income.setter
+    def income(self,value): 
+        self.__income = value
 
     @property
     def user(self): 

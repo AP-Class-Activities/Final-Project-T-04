@@ -3,6 +3,7 @@ import  welcome
 import  shopkeepercontrol
 from shopkeeper_db import DataBase
 import passworderror
+from login_db import DataBase as db
 class Ui_MainWindowshopkeeper(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -152,6 +153,8 @@ class Ui_MainWindowshopkeeper(object):
         user = self.lineEdit.text()
         check_pass = DataBase().check(user,passw)
         if check_pass:
+            user_check = DataBase().search(user)
+            add_login = db().add(user_check)
             self.mw12 = QtWidgets.QMainWindow()
             self.win14 = shopkeepercontrol.Ui_MainWindowshopkeepercontrol()
             self.win14.setupUi(self.mw12)

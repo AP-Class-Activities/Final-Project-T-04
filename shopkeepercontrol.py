@@ -2,6 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import shop
 import addproducts
 import welcome
+from login_db import DataBase
 class Ui_MainWindowshopkeepercontrol(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -223,6 +224,13 @@ class Ui_MainWindowshopkeepercontrol(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
+        temp = DataBase().dict()
+        score = str(temp["score"])
+        income = str(temp["income"])
+        location = temp["location"]
+        profit = str(temp["profit"])
+        wallet = str(temp["wallet"])
+        products = str(temp["products"])
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "shop"))
@@ -231,12 +239,18 @@ class Ui_MainWindowshopkeepercontrol(object):
         self.pushButton_2.clicked.connect(self.gotowin13)
         self.label_2.setText(_translate("MainWindow", "income"))
         self.label_5.setText(_translate("MainWindow", "score"))
-        self.label_8.setText(_translate("MainWindow", "rank"))
+        self.label_8.setText(_translate("MainWindow", "wallet"))
         self.label_3.setText(_translate("MainWindow", "profit"))
-        self.label_4.setText(_translate("MainWindow", "destination"))
+        self.label_4.setText(_translate("MainWindow", "location"))
+        self.lineEdit_6.setText(_translate("MainWindow", income))
+        self.lineEdit_5.setText(_translate("MainWindow", location))
+        self.lineEdit_8.setText(_translate("MainWindow", wallet))
+        self.lineEdit_3.setText(_translate("MainWindow", profit))
+        self.lineEdit_4.setText(_translate("MainWindow", score))
         self.pushButton_3.setText(_translate("MainWindow", "back"))
         self.pushButton_3.clicked.connect(self.gotowin17)
         self.label_9.setText(_translate("MainWindow", "items"))
+        self.listWidget.addItem(products)
 
     def gotowin12(self):                        #vasl  b shop
         self.mw10 = QtWidgets.QMainWindow()

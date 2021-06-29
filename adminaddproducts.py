@@ -141,18 +141,24 @@ class Ui_MainWindowadminaddproducts(object):
             return "There are no new requests!!!"
                 
     def accept(self):     #accept new shopkeeper
-        A = acceptPR().accept()
-        self.mw1 = QtWidgets.QMainWindow()
-        self.win3 = Qdialog.Ui_MainWindow()
-        self.win3.setupUi(self.mw1)
-        self.mw1.show()
+        try:
+            A = acceptPR.accept(self.box)
+            self.mw1 = QtWidgets.QMainWindow()
+            self.win3 = Qdialog.Ui_MainWindow()
+            self.win3.setupUi(self.mw1)
+            self.mw1.show()
+        except:
+            pass
 
     def reject(self):     #reject new shopkeeper
-        A = acceptPR().reject()
-        self.mw1 = QtWidgets.QMainWindow()
-        self.win3 = Qdialog.Ui_MainWindow()
-        self.win3.setupUi(self.mw1)
-        self.mw1.show()
+        try:
+            A = acceptPR.reject(self.box)
+            self.mw1 = QtWidgets.QMainWindow()
+            self.win3 = Qdialog.Ui_MainWindow()
+            self.win3.setupUi(self.mw1)
+            self.mw1.show()
+        except:
+            pass
 
     def gotowin23(self):                             #back b adminvorod
         self.mw21 = QtWidgets.QMainWindow()
