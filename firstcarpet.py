@@ -5,6 +5,7 @@ import favoritemessage
 import box
 from product_db import DataBase
 import json
+import show
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -210,6 +211,7 @@ class Ui_MainWindow(object):
         self.pushButton_9.setText(_translate("MainWindow", "back"))
         self.pushButton_2.setText(_translate("MainWindow", "Send"))
         self.pushButton_3.setText(_translate("MainWindow", "Show"))
+        self.pushButton_3.clicked.connect(self.gotowin83)
         self.pushButton_2.clicked.connect(self.send_comment)
     def send_comment(self):
         comment = self.plainTextEdit.toPlainText()
@@ -244,7 +246,13 @@ class Ui_MainWindow(object):
         self.mw79 = QtWidgets.QMainWindow()
         self.win81 = box.Ui_MainWindow()
         self.win81.setupUi(self.mw79)
-        self.mw79.show()                        
+        self.mw79.show()            
+
+    def gotowin83(self):                             #vasl b favoritmessage dialog
+        self.mw81 = QtWidgets.QMainWindow()
+        self.win83 = show.Ui_MainWindow()
+        self.win83.setupUi(self.mw81)
+        self.mw81.show()                        
 
 if __name__ == "__main__":
     import sys
