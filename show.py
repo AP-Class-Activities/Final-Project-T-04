@@ -92,7 +92,6 @@ class Ui_MainWindow(object):
         self.pushButton_9.clicked.connect(self.gotowin62)
 
     def gotowin62(self):                             #bastan
-        self.mw60 = QtWidgets.QMainWindow()
         self.MainWindow.hide()
                           
 

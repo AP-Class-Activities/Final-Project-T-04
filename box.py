@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-import shop
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -564,12 +564,8 @@ class Ui_MainWindow(object):
         self.pushButton_13.clicked.connect(self.gotowin70)
 
 
-    def gotowin70(self):                             #vasl b shop
-        self.mw68 = QtWidgets.QMainWindow()
-        self.win70 = shop.Ui_MainWindowshop()
-        self.win70.setupUi(self.mw68)
+    def gotowin70(self):                             #baste shodan
         self.MainWindow.hide()
-        self.mw68.show()            
 
 if __name__ == "__main__":
     import sys
