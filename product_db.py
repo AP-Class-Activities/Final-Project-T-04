@@ -51,5 +51,5 @@ class DataBase:
         count = 125389
         for i in lst:
             count += 6
-        st_counter = str(count)
+        st_counter = "PR"+str(count)
         return st_counter
