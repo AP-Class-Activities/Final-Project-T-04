@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import carpet
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -7,6 +7,7 @@ class Ui_MainWindow(object):
         MainWindow.resize(800, 800)
         MainWindow.setMaximumSize(QtCore.QSize(800, 800))
         MainWindow.setStyleSheet("background-color:rgb(0, 0, 0);")
+        self.MainWindow = MainWindow
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
@@ -183,7 +184,14 @@ class Ui_MainWindow(object):
         self.label_5.setText(_translate("MainWindow", "Comment"))
         self.label_6.setText(_translate("MainWindow", "Send"))
         self.pushButton_9.setText(_translate("MainWindow", "back"))
+        self.pushButton_9.clicked.connect(self.gotowin67)
 
+    def gotowin67(self):                             #vasl b carpet
+        self.mw65 = QtWidgets.QMainWindow()
+        self.win67 = carpet.Ui_MainWindowcarpet()
+        self.win67.setupUi(self.mw65)
+        self.MainWindow.hide()
+        self.mw65.show()                     
 
 if __name__ == "__main__":
     import sys
