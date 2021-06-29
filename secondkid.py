@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'firstkid.ui'
+# Form implementation generated from reading ui file 'secondkid.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -94,7 +94,7 @@ class Ui_MainWindow(object):
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(330, 200, 441, 511))
         self.label_4.setText("")
-        self.label_4.setPixmap(QtGui.QPixmap("IMG_2927.JPG"))
+        self.label_4.setPixmap(QtGui.QPixmap("IMG_2931.JPG"))
         self.label_4.setScaledContents(True)
         self.label_4.setObjectName("label_4")
         self.plainTextEdit = QtWidgets.QPlainTextEdit(self.centralwidget)
