@@ -8,6 +8,7 @@ import seventhcarpet
 import eighthcarpet
 import firstcarpet
 import fifthcarpet
+import box
 class Ui_MainWindowcarpet(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -295,6 +296,7 @@ class Ui_MainWindowcarpet(object):
         self.pushButton_9.clicked.connect(self.gotowin28)
         self.label_10.setText(_translate("MainWindow", "Iranian Carpet"))
         self.pushButton_10.setText(_translate("MainWindow", "PushButton"))
+        self.pushButton_10.clicked.connect(self.gotowin69)
 
     def gotowin28(self):                             #vasl b shop
         self.mw26 = QtWidgets.QMainWindow()
@@ -359,7 +361,16 @@ class Ui_MainWindowcarpet(object):
         self.win37 = eighthcarpet.Ui_MainWindow()
         self.win37.setupUi(self.mw35)
         self.MainWindow.hide()
-        self.mw35.show()                        
+        self.mw35.show()        
+
+    def gotowin69(self):                             #vasl b boxmessage
+        self.mw67 = QtWidgets.QMainWindow()
+        self.win69 = box.Ui_MainWindow()
+        self.win69.setupUi(self.mw67)
+        self.MainWindow.hide()
+        self.mw67.show()                        
+
+        
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
