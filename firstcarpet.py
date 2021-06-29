@@ -1,14 +1,14 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-<<<<<<< HEAD
+
 import carpet
 import boxmessage
 import favoritemessage
 import box
-=======
+
 from product_db import DataBase
 import json
 
->>>>>>> dc5ec55 (connecting comments)
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
