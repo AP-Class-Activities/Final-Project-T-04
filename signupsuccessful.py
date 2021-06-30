@@ -25,7 +25,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label.setFont(font)
-        self.label.setStyleSheet("color:red;\n"
+        self.label.setStyleSheet("color:rgb(69, 208, 0);\n"
 "")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
@@ -44,7 +44,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "Sign up successful!!! \n please login to your account!"))
+        self.label.setText(_translate("MainWindow", "Sign up successful \n please login to your account"))
 
 
 if __name__ == "__main__":
