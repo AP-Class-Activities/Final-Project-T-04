@@ -3,6 +3,7 @@ import  welcome
 import shop
 from customer_db import DataBase
 import passworderror
+import login_db
 
 class Ui_MainWindowcustomer(object):
     def setupUi(self, MainWindow):
@@ -152,6 +153,8 @@ class Ui_MainWindowcustomer(object):
         user = self.lineEdit.text()
         check_pass = DataBase().check(user,passw)
         if check_pass:
+            dict = DataBase().search(user)
+            login_db.DataBase().add(dict)
             self.mw12 = QtWidgets.QMainWindow()
             self.win14 = shop.Ui_MainWindowshop()
             self.win14.setupUi(self.mw12)
