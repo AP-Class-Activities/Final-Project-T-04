@@ -5,6 +5,7 @@ import favoritemessage
 import box
 import show
 from product_db import DataBase
+import login_db
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -239,6 +240,11 @@ class Ui_MainWindow(object):
         self.mw79.show()       
 
     def gotowin71(self):                             #vasl b sabadkharid dialog
+        temp = login_db.DataBase().read_list()
+        dict = temp[0]
+        ID = self.ID()
+        dict["cart"].append(ID)
+        login_db.DataBase().add(dict)
         self.mw69 = QtWidgets.QMainWindow()
         self.win71 = boxmessage.Ui_MainWindow()
         self.win71.setupUi(self.mw69)
