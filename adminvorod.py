@@ -3,11 +3,13 @@ import adminadd
 import adminaddproducts
 import adminaddshopkeeper
 import welcome
+
+
 class Ui_MainWindowadminvorod(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
-        MainWindow.setMinimumSize(QtCore.QSize(800, 600))
+        MainWindow.setMinimumSize(QtCore.QSize(800, 800))
         MainWindow.setMaximumSize(QtCore.QSize(800, 800))
         MainWindow.setStyleSheet("background-color:rgb(0, 0, 0)")
         self.MainWindow = MainWindow
@@ -29,56 +31,56 @@ class Ui_MainWindowadminvorod(object):
         self.label_7.setScaledContents(True)
         self.label_7.setObjectName("label_7")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(280, 370, 221, 61))
+        self.pushButton.setGeometry(QtCore.QRect(230, 480, 341, 111))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(18)
         self.pushButton.setFont(font)
         self.pushButton.setStyleSheet("QPushButton{\n"
-"     border-radius: 15px;\n"
-"\n"
-"    background-color:rgb(255, 170, 0);\n"
-"\n"
-"    color:black;\n"
-"}")
+                                      "     border-radius: 15px;\n"
+                                      "\n"
+                                      "    background-color:rgb(255, 170, 0);\n"
+                                      "\n"
+                                      "    color:black;\n"
+                                      "}")
         self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(280, 280, 221, 61))
+        self.pushButton_2.setGeometry(QtCore.QRect(230, 330, 341, 111))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(18)
         self.pushButton_2.setFont(font)
         self.pushButton_2.setStyleSheet("QPushButton{\n"
-"     border-radius: 15px;\n"
-"\n"
-"    background-color:rgb(143, 214, 214);\n"
-"\n"
-"    color:black;\n"
-"}")
+                                        "     border-radius: 15px;\n"
+                                        "\n"
+                                        "    background-color:rgb(143, 214, 214);\n"
+                                        "\n"
+                                        "    color:black;\n"
+                                        "}")
         self.pushButton_2.setObjectName("pushButton_2")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(280, 190, 221, 61))
+        self.pushButton_3.setGeometry(QtCore.QRect(230, 180, 341, 111))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(18)
         self.pushButton_3.setFont(font)
         self.pushButton_3.setStyleSheet("QPushButton{\n"
-"     border-radius: 15px;\n"
-"\n"
-"    background-color:rgb(255, 170, 0);\n"
-"\n"
-"    color:black;\n"
-"}")
+                                        "     border-radius: 15px;\n"
+                                        "\n"
+                                        "    background-color:rgb(255, 170, 0);\n"
+                                        "\n"
+                                        "    color:black;\n"
+                                        "}")
         self.pushButton_3.setObjectName("pushButton_3")
         self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_4.setGeometry(QtCore.QRect(280, 470, 221, 61))
+        self.pushButton_4.setGeometry(QtCore.QRect(230, 630, 341, 111))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(18)
         self.pushButton_4.setFont(font)
         self.pushButton_4.setStyleSheet("QPushButton{\n"
-"     border-radius: 15px;\n"
-"\n"
-"    background-color:rgb(143, 214, 214);\n"
-"\n"
-"    color:black;\n"
-"}")
+                                        "     border-radius: 15px;\n"
+                                        "\n"
+                                        "    background-color:rgb(143, 214, 214);\n"
+                                        "\n"
+                                        "    color:black;\n"
+                                        "}")
         self.pushButton_4.setObjectName("pushButton_4")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -103,35 +105,39 @@ class Ui_MainWindowadminvorod(object):
         self.pushButton_3.clicked.connect(self.gotowin20)
         self.pushButton_4.setText(_translate("MainWindow", "back"))
         self.pushButton_4.clicked.connect(self.gotowin21)
-    def gotowin18(self):                             #shopkeeper b adminaddshopkeeper
+
+    def gotowin18(self):  # shopkeeper b adminaddshopkeeper
         self.mw16 = QtWidgets.QMainWindow()
         self.win18 = adminaddshopkeeper.Ui_MainWindowadminaddshopkeeper()
         self.win18.setupUi(self.mw16)
         self.MainWindow.hide()
-        self.mw16.show()    
+        self.mw16.show()
 
-    def gotowin19(self):                             #products b adminaddproducts
+    def gotowin19(self):  # products b adminaddproducts
         self.mw17 = QtWidgets.QMainWindow()
         self.win19 = adminaddproducts.Ui_MainWindowadminaddproducts()
         self.win19.setupUi(self.mw17)
         self.MainWindow.hide()
-        self.mw17.show()    
-        
-    def gotowin20(self):                             #custoer b adminadd
+        self.mw17.show()
+
+    def gotowin20(self):  # custoer b adminadd
         self.mw18 = QtWidgets.QMainWindow()
         self.win20 = adminadd.Ui_MainWindowadminadd()
         self.win20.setupUi(self.mw18)
         self.MainWindow.hide()
-        self.mw18.show()         
+        self.mw18.show()
 
-    def gotowin21(self):                             #back b welcome
+    def gotowin21(self):  # back b welcome
         self.mw19 = QtWidgets.QMainWindow()
         self.win21 = welcome.Ui_MainWindowwelcome()
         self.win21.setupUi(self.mw19)
         self.MainWindow.hide()
-        self.mw19.show()         
+        self.mw19.show()
+
+
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindowadminvorod()
