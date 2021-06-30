@@ -217,7 +217,7 @@ class Ui_MainWindow(object):
         self.pushButton_3.clicked.connect(self.gotowin83)
         self.pushButton_2.clicked.connect(self.send_comment)
     def ID(self):
-        return "PR5467236"
+        return "PR5467206"
 
     def send_comment(self):
         comment = self.plainTextEdit.toPlainText()
