@@ -209,6 +209,7 @@ class Ui_MainWindow(object):
         self.pushButton.clicked.connect(self.gotowin81)
         self.label_5.setText(_translate("MainWindow", "Comment"))
         self.pushButton_9.setText(_translate("MainWindow", "back"))
+        self.pushButton_9.clicked.connect(self.gotowin62)
         self.pushButton_2.setText(_translate("MainWindow", "Send"))
         self.pushButton_3.setText(_translate("MainWindow", "Show"))
         self.pushButton_3.clicked.connect(self.gotowin83)
