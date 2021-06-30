@@ -127,6 +127,9 @@ class Ui_MainWindow(object):
         self.pushButton_13.clicked.connect(self.gotowin71)
         self.label_17 = QtWidgets.QLabel(self.centralwidget)
         self.label_17.setGeometry(QtCore.QRect(70, 310, 221, 121))
+        font = QtGui.QFont()
+        font.setPointSize(6)
+        self.label_17.setFont(font)
         self.label_17.setStyleSheet("QLabel{\n"
 "    border: 2px solid rgb(38, 38, 48);\n"
 "    border-radius: 1px;\n"
