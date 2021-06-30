@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(10, 50, 371, 171))
         font = QtGui.QFont()
-        font.setPointSize(12)
+        font.setPointSize(10)
         self.label.setFont(font)
         self.label.setStyleSheet("color:red;\n"
 "")
