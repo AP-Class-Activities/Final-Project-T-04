@@ -24,7 +24,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label.setFont(font)
-        self.label.setStyleSheet("color:red;\n"
+        self.label.setStyleSheet("color:rgb(60, 208, 0);\n"
 "")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
