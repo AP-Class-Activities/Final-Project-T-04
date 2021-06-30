@@ -9,6 +9,8 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import login_db
+import product_db
 
 
 class Ui_MainWindow(object):
@@ -565,8 +567,57 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
+        temp = login_db.DataBase().dict()
+        IDs = temp["cart"]
+        try:
+                ID1 = IDs[0]
+                product1 = product_db.DataBase().search(ID1)
+                name1 = product1["name"]
+                price1 = str(product1["price"])
+        except:
+                name1 = ""
+                price1 = "0"
+        try:
+                ID2 = IDs[1]
+                product2 = product_db.DataBase().search(ID2)
+                name2 = product2["name"]
+                price2 = str(product2["price"])
+        except:
+                name2 = ""
+                price2 = "0"
+        try:
+                ID3 = IDs[2]
+                product3 = product_db.DataBase().search(ID3)
+                name3 = product3["name"]
+                price3 = str(product3["price"])
+        except:
+                name3 = ""
+                price3 = "0"
+        try:
+                ID4 = IDs[3]
+                product4 = product_db.DataBase().search(ID4)
+                name4 = product4["name"]
+                price4 = str(product4["price"])
+        except:
+                name4 = ""
+                price4 = "0"
+        total_price = self.total()
+
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Shoping cart"))
+        self.plainTextEdit_2.insertPlainText("1")
+        self.plainTextEdit_3.insertPlainText("2")
+        self.plainTextEdit_4.insertPlainText("3")
+        self.plainTextEdit_5.insertPlainText("4")
+        self.label_4.setText(_translate("MainWindow", name3))
+        self.label_2.setText(_translate("MainWindow", name1))
+        self.label_3.setText(_translate("MainWindow", name2))
+        self.label_12.setText(_translate("MainWindow", name4))
+        self.label_13.setText(_translate("MainWindow", price1))
+        self.label_14.setText(_translate("MainWindow", price2))
+        self.label_15.setText(_translate("MainWindow", price3))
+        self.label_16.setText(_translate("MainWindow", price4))
+        self.label_17.setText(total_price)
         self.pushButton.setText(_translate("MainWindow", "Charging Wallet"))
         self.label_5.setText(_translate("MainWindow", "Address"))
         self.label_6.setText(_translate("MainWindow", "Price"))
@@ -583,7 +634,30 @@ class Ui_MainWindow(object):
         self.pushButton_12.setText(_translate("MainWindow", "Delete"))
         self.pushButton_3.setText(_translate("MainWindow", "Pay"))
         self.pushButton_13.setText(_translate("MainWindow", "Back"))
+<<<<<<< HEAD
         self.pushButton_2.setText(_translate("MainWindow", "Total Price"))
+=======
+        self.pushButton_13.clicked.connect(self.gotowin1)
+
+    def total(self):
+        price1 = int(self.label_13.text())
+        price2 = int(self.label_14.text())
+        price3 = int(self.label_15.text())
+        price4 = int(self.label_16.text())
+        count1 = int(self.plainTextEdit_2.toPlainText())
+        count2 = int(self.plainTextEdit_3.toPlainText())
+        count3 = int(self.plainTextEdit_4.toPlainText())
+        count4 = int(self.plainTextEdit_5.toPlainText())
+        total1 = price1 * count1
+        total2 = price2 * count2
+        total3 = price3 * count3
+        total4 = price4 * count4
+        total_all = str(total1 + total2 +total3 + total4)
+        return total_all
+
+
+
+>>>>>>> 2d9fdf8 (l)
 
 
 if __name__ == "__main__":
