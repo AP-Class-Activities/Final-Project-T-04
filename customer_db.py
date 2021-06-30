@@ -26,9 +26,9 @@ class DataBase:
         for dictionaries in lst:
             for j,i in dictionaries.items():
                 if key == i:
-                    return dictionaries,1
+                    return dictionaries
         else:
-            return "User not found!!!!",0
+            return "User not found!!!!"
     def search_value(self,value):
         lst = self.read_list()
         for dictionaries in lst:
