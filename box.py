@@ -13,6 +13,7 @@ class Ui_MainWindow(object):
         MainWindow.resize(800, 800)
         MainWindow.setMaximumSize(QtCore.QSize(800, 800))
         MainWindow.setStyleSheet("background-color: rgb(0, 0, 0)")
+        self.MainWindow = MainWindow
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
@@ -633,8 +634,8 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(_translate("MainWindow", "Pay"))
         self.pushButton_3.clicked.connect(self.gotowin3)
         self.pushButton_13.setText(_translate("MainWindow", "Back"))
-        self.pushButton_2.setText(_translate("MainWindow", "Total Price"))
         self.pushButton_13.clicked.connect(self.gotowin1)
+        self.pushButton_2.setText(_translate("MainWindow", "Total Price"))
         self.pushButton_2.clicked.connect(self.total)
 
     def delete1(self):
@@ -650,8 +651,7 @@ class Ui_MainWindow(object):
         self.label_16.setText("0")
         self.label_12.setText("")
     def gotowin1(self):    #vasl be back
-        #self.MainWindow.close()
-        pass
+        self.MainWindow.close()
     def gotowin2(self):     #vasl be charging wallet
         self.mw60 = QtWidgets.QMainWindow()
         self.win62 = chargingwallet.Ui_MainWindow()
