@@ -24,7 +24,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(10, 50, 371, 171))
         font = QtGui.QFont()
-        font.setPointSize(12)
+        font.setPointSize(9)
         self.label.setFont(font)
         self.label.setStyleSheet("color:rgb(122,184,169);\n"
 "")
