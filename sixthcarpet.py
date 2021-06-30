@@ -4,6 +4,7 @@ import boxmessage
 import favoritemessage
 import box
 import show
+from product_db import DataBase
 
 
 class Ui_MainWindow(object):
@@ -127,6 +128,9 @@ class Ui_MainWindow(object):
         self.pushButton_13.clicked.connect(self.gotowin71)
         self.label_17 = QtWidgets.QLabel(self.centralwidget)
         self.label_17.setGeometry(QtCore.QRect(70, 310, 221, 121))
+        font = QtGui.QFont()
+        font.setPointSize(7)
+        self.label_17.setFont(font)
         self.label_17.setStyleSheet("QLabel{\n"
 "    border: 2px solid rgb(38, 38, 48);\n"
 "    border-radius: 1px;\n"
@@ -194,11 +198,17 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
+        ID_of_product = self.ID()
+        dict = DataBase().search(ID_of_product)
+        name = "Name : " + dict["name"]
+        discription = dict["discription"]
+        price = str(dict["price"]) + " T"     
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_10.setText(_translate("MainWindow", "Iranian Carpet"))
-        self.label_2.setText(_translate("MainWindow", "T"))
+        self.label_2.setText(_translate("MainWindow", price))
         self.label_3.setText(_translate("MainWindow", "only"))
+        self.label_17.setText(_translate("MainWindow", name + "\n \n" +discription))
         self.pushButton.setText(_translate("MainWindow", "Order now"))
         self.pushButton.clicked.connect(self.gotowin81)
         self.label_5.setText(_translate("MainWindow", "Comment"))
@@ -206,7 +216,18 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(_translate("MainWindow", "Send"))
         self.pushButton_3.setText(_translate("MainWindow", "Show"))
         self.pushButton_3.clicked.connect(self.gotowin83)
+        self.pushButton_2.clicked.connect(self.send_comment)
+    def ID(self):
+        return "PR5467136"
 
+    def send_comment(self):
+        comment = self.plainTextEdit.toPlainText()
+        ID_of_product = self.ID()
+        temp = DataBase().search(ID_of_product)
+        temp["comments"].append(comment)
+        ID = temp["ID"]
+        DataBase().delete(ID)
+        add_to_db = DataBase().add(temp)        
     def gotowin80(self):                             #vasl b favoritmessage dialog
         self.mw78 = QtWidgets.QMainWindow()
         self.win80 = favoritemessage.Ui_MainWindow()
