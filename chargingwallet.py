@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from customer_db import DataBase
 
 
 class Ui_MainWindow(object):
@@ -127,6 +128,19 @@ class Ui_MainWindow(object):
         self.pushButton_10.setText(_translate("MainWindow", "Ok"))
         self.label_10.setText(_translate("MainWindow", "Deposit Amount"))
         self.label_11.setText(_translate("MainWindow", "User"))
+        self.pushButton_10.clicked.connect(self.deposit)
+    def deposit(self):
+        user = self.plainTextEdit_3.toPlainText()
+        money = int(self.plainTextEdit_2.toPlainText())
+        dict = DataBase().search(user)
+        wallet = dict["wallet"]
+        new_wallet = wallet + money
+        dict["wallet"] = new_wallet
+        print(dict)
+        print(money)
+        DataBase().delete(user)
+        DataBase().add(dict)
+
 
 
 if __name__ == "__main__":
