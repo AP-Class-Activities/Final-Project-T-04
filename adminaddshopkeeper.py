@@ -3,11 +3,12 @@ import adminvorod
 from admin_db import acceptSH
 import Qdialog
 
+
 class Ui_MainWindowadminaddshopkeeper(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
-        MainWindow.setMinimumSize(QtCore.QSize(800, 600))
+        MainWindow.setMinimumSize(QtCore.QSize(800, 800))
         MainWindow.setMaximumSize(QtCore.QSize(800, 800))
         MainWindow.setStyleSheet("background-color:rgb(0, 0, 0)")
         self.MainWindow = MainWindow
@@ -29,85 +30,85 @@ class Ui_MainWindowadminaddshopkeeper(object):
         self.label_7.setScaledContents(True)
         self.label_7.setObjectName("label_7")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(600, 380, 91, 41))
+        self.pushButton.setGeometry(QtCore.QRect(570, 660, 111, 61))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.pushButton.setFont(font)
         self.pushButton.setStyleSheet("QPushButton{\n"
-"     border-radius: 15px;\n"
-"\n"
-"    background-color:rgb(255, 170, 0);\n"
-"\n"
-"    color:black;\n"
-"}")
+                                      "     border-radius: 15px;\n"
+                                      "\n"
+                                      "    background-color:rgb(255, 170, 0);\n"
+                                      "\n"
+                                      "    color:black;\n"
+                                      "}")
         self.pushButton.setObjectName("pushButton")
         self.lineEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_3.setGeometry(QtCore.QRect(72, 180, 661, 171))
+        self.lineEdit_3.setGeometry(QtCore.QRect(90, 280, 621, 351))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.lineEdit_3.setFont(font)
         self.lineEdit_3.setStyleSheet("QLineEdit{\n"
-"     border-radius: 15px;\n"
-"\n"
-"    background-color: rgb(143, 214, 214);\n"
-"\n"
-"    color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"")
+                                      "     border-radius: 15px;\n"
+                                      "\n"
+                                      "    background-color: rgb(143, 214, 214);\n"
+                                      "\n"
+                                      "    color: rgb(255, 255, 255);\n"
+                                      "}\n"
+                                      "\n"
+                                      "")
         self.lineEdit_3.setObjectName("lineEdit_3")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(70, 100, 381, 71))
+        self.label.setGeometry(QtCore.QRect(90, 140, 341, 111))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label.setFont(font)
         self.label.setStyleSheet("QLabel{\n"
-"     border-radius: 15px;\n"
-"\n"
-"    background-color:rgb(255, 170, 0);\n"
-"\n"
-"    color:black;\n"
-"}")
+                                 "     border-radius: 15px;\n"
+                                 "\n"
+                                 "    background-color:rgb(255, 170, 0);\n"
+                                 "\n"
+                                 "    color:black;\n"
+                                 "}")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(460, 380, 91, 41))
+        self.pushButton_2.setGeometry(QtCore.QRect(420, 660, 111, 61))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.pushButton_2.setFont(font)
         self.pushButton_2.setStyleSheet("QPushButton{\n"
-"     border-radius: 15px;\n"
-"\n"
-"    background-color:rgb(143, 214, 214);\n"
-"\n"
-"    color:black;\n"
-"}")
+                                        "     border-radius: 15px;\n"
+                                        "\n"
+                                        "    background-color:rgb(143, 214, 214);\n"
+                                        "\n"
+                                        "    color:black;\n"
+                                        "}")
         self.pushButton_2.setObjectName("pushButton_2")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(330, 380, 91, 41))
+        self.pushButton_3.setGeometry(QtCore.QRect(270, 660, 111, 61))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.pushButton_3.setFont(font)
         self.pushButton_3.setStyleSheet("QPushButton{\n"
-"     border-radius: 15px;\n"
-"\n"
-"    background-color:rgb(255, 170, 0);\n"
-"\n"
-"    color:black;\n"
-"}")
+                                        "     border-radius: 15px;\n"
+                                        "\n"
+                                        "    background-color:rgb(255, 170, 0);\n"
+                                        "\n"
+                                        "    color:black;\n"
+                                        "}")
         self.pushButton_3.setObjectName("pushButton_3")
         self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_4.setGeometry(QtCore.QRect(200, 380, 91, 41))
+        self.pushButton_4.setGeometry(QtCore.QRect(120, 660, 111, 61))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.pushButton_4.setFont(font)
         self.pushButton_4.setStyleSheet("QPushButton{\n"
-"     border-radius: 15px;\n"
-"\n"
-"    background-color:rgb(143, 214, 214);\n"
-"\n"
-"    color:black;\n"
-"}")
+                                        "     border-radius: 15px;\n"
+                                        "\n"
+                                        "    background-color:rgb(143, 214, 214);\n"
+                                        "\n"
+                                        "    color:black;\n"
+                                        "}")
         self.pushButton_4.setObjectName("pushButton_4")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -136,34 +137,35 @@ class Ui_MainWindowadminaddshopkeeper(object):
 
     def box(self):
         try:
-                return(acceptSH().show2())
+            return (acceptSH().show2())
         except:
-                return "There are no new requests!!!"
-                
-    def accept(self):     #accept new shopkeeper
+            return "There are no new requests!!!"
+
+    def accept(self):  # accept new shopkeeper
         A = acceptSH().accept()
         self.mw1 = QtWidgets.QMainWindow()
         self.win3 = Qdialog.Ui_MainWindow()
         self.win3.setupUi(self.mw1)
         self.mw1.show()
 
-    def reject(self):     #reject new shopkeeper
+    def reject(self):  # reject new shopkeeper
         A = acceptSH().reject()
         self.mw1 = QtWidgets.QMainWindow()
         self.win3 = Qdialog.Ui_MainWindow()
         self.win3.setupUi(self.mw1)
         self.mw1.show()
 
-    def gotowin22(self):                             #back b adminvorod
+    def gotowin22(self):  # back b adminvorod
         self.mw20 = QtWidgets.QMainWindow()
         self.win22 = adminvorod.Ui_MainWindowadminvorod()
         self.win22.setupUi(self.mw20)
         self.MainWindow.hide()
-        self.mw20.show()                 
+        self.mw20.show()
 
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindowadminaddshopkeeper()
