@@ -561,11 +561,11 @@ class Ui_MainWindow(object):
         self.pushButton_12.setText(_translate("MainWindow", "Delete"))
         self.pushButton_3.setText(_translate("MainWindow", "Pay"))
         self.pushButton_13.setText(_translate("MainWindow", "Back"))
-        self.pushButton_13.clicked.connect(self.gotowin70)
+        self.pushButton_13.clicked.connect(self.gotowin1)
 
 
-    def gotowin70(self):                             #baste shodan
-        self.MainWindow.hide()
+    def gotowin1(self):                             #baste shodan
+        self.MainWindow.close()
 
 if __name__ == "__main__":
     import sys
