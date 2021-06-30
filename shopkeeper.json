@@ -1,4 +1,1 @@
-[
-
-    
-]
+[{"user": "Hamed", "password": "1234", "email": "html113343@gmail.com", "wallet": 0, "products": [], "location": "", "sold items": [], "score": 0, "ID": "SL554321", "orders": [], "profit": 0}, {"user": "Xvil", "password": "123456", "email": "dtm13@gmail.com", "wallet": 0, "products": ["me", "Table", "Table", "Table", "Table", "Table"], "location": "", "sold items": [], "score": 0, "ID": "SL654321", "orders": [], "profit": 0, "income": 0}, {"user": "Asghar", "password": "1234", "email": "Asghar@gmail.com", "wallet": 0, "products": [], "location": "", "sold items": [], "score": 0, "ID": "SL554323", "orders": [], "profit": 0, "cart": []}]
