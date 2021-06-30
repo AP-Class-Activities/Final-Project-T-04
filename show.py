@@ -98,7 +98,7 @@ class Ui_MainWindow(object):
         self.listWidget.addItem(comments)
 
     def gotowin62(self):                             #bastan
-        self.close()
+        self.MainWindow.close()
                           
 
 
